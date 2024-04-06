@@ -1,0 +1,34 @@
+---
+import { i18n } from "../modules/shared/i18n"
+
+// setup localization
+const lang = Astro.url.searchParams.get('lang');
+console.log({ lang })
+const isValidLocale = i18n.availableLocales.includes(lang)
+i18n.locale = isValidLocale ? lang : 'es'
+
+// localization strings 
+const localizationStrings = {
+  locale: i18n.locale,
+  mission: i18n.translate('landing.mission')
+}
+
+---
+
+<html lang={localizationStrings.locale}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro</title>
+	</head>
+	<body>
+		<h1>{localizationStrings.mission}</h1>
+    <a href="?lang=es">Español</a>
+    <a href="?lang=nahuatl">Nahuatl</a>
+    <a href="?lang=en">English</a>
+	</body>
+</html>
+<script>
+</script>

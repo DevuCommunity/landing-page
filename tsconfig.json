@@ -1,7 +1,3 @@
 {
-  "compilerOptions": {
-    "jsx": "react"
-  },
-  "extends": "@atomico/tsconfig/base.json",
-  "include": ["src/**/*"]
+  "extends": "astro/tsconfigs/base"
 }
