@@ -25,18 +25,12 @@ const items = [
 ---
 <!-- A carousel that automatically scrolls to the left and stops on hover -->
 <div class="
-  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4
-  overflow-x-auto
-  scroll-snap-type-x-mandatory
-  snap-center
+  grid
   gap-4
-  rounded-lg
-  shadow-lg
-  duration-300
-  ease-in-out
-  cursor-pointer
-  transform
-  transition-all
+  grid-cols-1
+  md:grid-cols-1
+  lg:grid-cols-3
+  xl:grid-cols-4
   ">
   {items.map(item => (
     <Item title={item.name} content={item.description} />
