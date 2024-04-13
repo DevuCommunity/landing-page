@@ -1,151 +1,67 @@
 ---
 import LandingLayout from "../modules/landing/components/layout/index.astro"
 import Hero from "../modules/landing/components/hero/index.astro"
+import Title from "../modules/landing/components/title/index.astro"
+import SectionsContainer from "../modules/landing/components/sections-container/index.astro"
 import ValuesSection from "../modules/landing/components/values-section/index.astro"
 import ProjectsSection from "../modules/landing/components/projects-section/index.astro"
 import GallerySection from "../modules/landing/components/gallery-section/index.astro"
+import TeamSection from "../modules/landing/components/team-section/index.astro"
+import NextEventsSection from "../modules/landing/components/next-events-section/index.astro"
+import AsideMenu from "../modules/landing/components/layout/navbar.astro"
 ---
 <LandingLayout>
-  <div style="background-color: hsl(210deg, 30%, 8%)">
-    <section>
-      <Hero />
-    </section>
-    <div class="
-      bg-gradient-to-b
-    from-blue-900  
-      to-black-900
-      bg-noise
-      ">
-      <section class="pb-8">
-        <ValuesSection />
-      </section>
-      <section class="p-8">
-        <h2 class="text-3xl text-white pb-8 text-center">
-          Próximos eventos
-        </h2>
-        <div
-          class="
-            bg-blue-900
-            p-8
-            rounded-lg
-            text-white
-            text-center
-          ">
-          <h3
-            class="
-              text-2xl
-              pb-4
-            "
-          >
-            Womens Techmakers
-          </h3>
-          <div
-            class="
-              p-8
-              text-white
-              text-center
-            "
-          >
-            <h3>Charla de introducción a la programación</h3>
-            <p>Fecha: 20 de marzo</p>
-            <p>Hora: 10:00 am</p>
-            <p>Plataforma: Google Meet</p>
-
-            <button
-              class="
-                bg-blue-500
-                hover:bg-blue-700
-                text-white
-                font-bold
-                py-2
-                px-4
-                rounded
-                mt-4
-              "
-            >Registrarse</button>
-
-          </div>
-        </div>
-      </section>
-      <section class="p-8">
-        <h2 class="text-3xl text-white pb-8 text-center">
-          Proyectos
-        </h2>
-        <ProjectsSection />
-      </section>
-      <section class="p-8">
-        <h2 class="text-3xl text-white pb-8 text-center">
-          Galería
-        </h2>
-        <GallerySection />
-      </section>
-      <section class="p-8">
-        <h2 class="text-3xl text-white pb-8 text-center">
-          Equipo
-        </h2>
-        <!-- The members list and cofounders with a rounded photo, name, social networks, and title -->
-        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-          <div class="bg-blue-900 p-4 rounded-lg">
-            <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
-            <h3 class="text-white text-center text-xl">Jorge Cano</h3>
-            <p class="text-white
-              text-center
-              text-sm
-              pb-4
-            ">Co-fundador</p>
-            <div class="flex justify-center">
-              <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
-                <png-icon name="twitter" class="w-6 h-6" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-blue-900 p-4 rounded-lg">
-            <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
-            <h3 class="text-white text-center text-xl">Jorge Cano</h3>
-            <p class="text-white
-              text-center
-              text-sm
-              pb-4
-            ">Co-fundador</p>
-            <div class="flex justify-center">
-              <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
-                <png-icon name="twitter" class="w-6 h-6" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-blue-900 p-4 rounded-lg">
-            <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
-            <h3 class="text-white text-center text-xl">Jorge Cano</h3>
-            <p class="text-white
-              text-center
-              text-sm
-              pb-4
-            ">Co-fundador</p>
-            <div class="flex justify-center">
-              <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
-                <png-icon name="twitter" class="w-6 h-6" />
-              </a>
-            </div>
-          </div>
-          <div class="bg-blue-900 p-4 rounded-lg">
-            <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
-            <h3 class="text-white text-center text-xl">Jorge Cano</h3>
-            <p class="text-white
-              text-center
-              text-sm
-              pb-4
-            ">Co-fundador</p>
-            <div class="flex justify-center">
-              <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
-                <png-icon name="twitter" class="w-6 h-6" />
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section>
-        Comunidades aliadas
-      </section>
-    </div>
-  </div>
+    <Hero />
+    <SectionsContainer>
+      <div
+      >
+        <AsideMenu />
+      </div>
+      <div>
+        <section id="about" class="pb-8">
+          <ValuesSection />
+        </section>
+        <section id="events" class="p-8">
+          <Title>Próximos eventos</Title>
+          <NextEventsSection />
+        </section>
+        <section id="projects" class="p-8">
+          <Title>Proyectos</Title>
+          <ProjectsSection />
+        </section>
+        <section id="gallery" class="p-8">
+          <Title>Galería</Title>
+          <GallerySection />
+        </section>
+        <section id="team" class="p-8">
+          <Title>Equipo</Title>
+          <TeamSection />
+        </section>
+        <section id="communities">
+          Comunidades aliadas
+        </section>
+      </div>
+    </SectionsContainer>
 </LandingLayout>
+
+<script>
+  // Smooth scrolling behavior
+  document.addEventListener('DOMContentLoaded', function() {
+    const links = document.querySelectorAll('.nav-link');
+    
+    links.forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute('href').substring(1);
+        const target = document.getElementById(targetId);
+        if (target) {
+          const offsetTop = target.offsetTop;
+          window.scrollTo({
+            top: offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  });
+</script>

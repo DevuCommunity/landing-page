@@ -1,20 +1,42 @@
 ---
 import { LanguageSelector } from "./language-selector"
+import logoImage from "../../../../../public/assets/logo.png"
 ---
 
-<nav class="flex items-center justify-between p-4 bg-gray-200">
-  <a href="/" class="text-xl font-bold">Logo del Sitio</a>
-  <ul class="flex items-center space-x-4">
-    <li><a href="#seccion1">¿Qué es todo esto?</a></li>
-    <li><a href="#seccion2">Proyectos</a></li>
-    <li><a href="#seccion3">Eventos</a></li>
-    <li><a href="#seccion3">Galería</a></li>
-    <li><a href="#seccion3">Equipo</a></li>
+<aside class="
+  hidden
+  sm:flex
+  justify-between
+  bg-transparent
+  text-white
+  h-screen
+  sticky
+  top-0
+  p-16
+">
+  
+  <ul class="flex flex-col items-start">
+    <!-- hide options in small screens -->
+    <li class="">
+      <a href="#about" class="nav-link">¿Qué es todo esto?</a>
+    </li>
+    <li class="">
+      <a href="#events" class="nav-link">Eventos</a>
+    </li>
+    <li class="">
+      <a href="#projects" class="nav-link">Proyectos</a>
+    </li>
+    <li class="">
+      <a href="#gallery" class="nav-link">Galería</a>
+    </li>
+    <li class="">
+      <a href="#team" class="nav-link">Equipo</a>
+    </li>
     <li>
       <LanguageSelector currentLanguage="MX" client:only="react" />
     </li>
   </ul>
-</nav>
+</aside>
 
 {
   /*

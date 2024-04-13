@@ -1,11 +1,10 @@
 ---
 import Footer from "./footer.astro"
-import Navbar from "./navbar.astro"
+import AsideMenu from "./navbar.astro"
 import { i18n } from "../../../../modules/shared/i18n"
 
 // setup localization
 const lang = Astro.url.searchParams.get('lang');
-console.log({ lang })
 const isValidLocale = i18n.availableLocales.includes(lang)
 i18n.locale = isValidLocale ? lang : 'es'
 
@@ -25,8 +24,16 @@ const localizationStrings = {
 		<title>Devu Community</title>
 	</head>
 	<body>
-    <Navbar />
-    <slot /> {/* content */}
-    <Footer />
+    <main class="
+      bg-gradient-to-b
+      from-purple-800
+      to-blue-900
+      bg-noise
+    ">
+      <section>
+        <slot /> {/* content */}
+        <Footer />
+      </section>
+    </main>
 	</body>
 </html>
