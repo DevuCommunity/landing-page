@@ -1,0 +1,89 @@
+---
+const items = [
+  {
+    caption: 'hacktober en el IPN CDMX 2023',
+    image: '/img/hacktoberfest.png',
+    description: 'Hacktoberfest es un evento anual que se celebra en octubre y que promueve la contribución a proyectos de código abierto. En el IPN CDMX 2023 se llevará a cabo una serie de eventos para fomentar la participación de la comunidad en este evento.',
+  },
+  {
+    caption: 'Talleres de programación en el IPN CDMX 2023',
+    image: '/img/talleres.png',
+    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de talleres de programación para que los estudiantes puedan aprender nuevas tecnologías y mejorar sus habilidades en el desarrollo de software.',
+  },
+  {
+    caption: 'Conferencias sobre tecnología en el IPN CDMX 2023',
+    image: '/img/conferencias.png',
+    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de conferencias sobre tecnología para que los estudiantes puedan conocer las últimas tendencias en el mundo de la tecnología y la informática.',
+  },
+  {
+    caption: 'Hackathons en el IPN CDMX 2023',
+    image: '/img/hackathons.png',
+    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de hackathons para que los estudiantes puedan poner en práctica sus habilidades en el desarrollo de software y trabajar en equipo para resolver problemas reales.',
+  },
+  {
+    caption: 'Cursos de programación en el IPN CDMX 2023',
+    image: '/img/cursos.png',
+    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de cursos de programación para que los estudiantes puedan aprender nuevas tecnologías y mejorar sus habilidades en el desarrollo de software.',
+  },
+  {
+    caption: 'Charlas sobre tecnología en el IPN CDMX 2023',
+    image: '/img/charlas.png',
+    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de charlas sobre tecnología para que los estudiantes puedan conocer las últimas tendencias en el mundo de la tecnología y la informática.',
+  },
+  {
+    caption: 'Torneos de programación en el IPN CDMX 2023',
+    image: '/img/torneos.png',
+    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de torneos de programación para que los estudiantes puedan poner en práctica sus habilidades en el desarrollo de software y competir con otros estudiantes.',
+  },
+  {
+    caption: 'Seminarios sobre tecnología en el IPN CDMX 2023',
+    image: '/img/seminarios.png',
+    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de seminarios sobre tecnología para que los estudiantes puedan conocer las últimas tendencias en el mundo de la tecnología y la informática.',
+  },
+  {
+    caption: 'Workshops de programación en el IPN CDMX 2023',
+    image: '/img/workshops.png',
+    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de workshops de programación para que los estudiantes puedan aprender nuevas tecnologías y mejorar sus habilidades en el desarrollo de software.',
+  },
+  {
+    caption: 'Exposiciones sobre tecnología en el IPN CDMX 2023',
+    image: '/img/exposiciones.png',
+    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de exposiciones sobre tecnología para que los estudiantes puedan conocer las últimas tendencias en el mundo de la'
+  }
+]
+---
+
+<!-- Gallery of pictures with round border like cards in collage layout -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+  <!-- For each item in the items array, create a card with the image, caption, and description -->
+  {
+    items.map(item => (
+      <div
+        class="
+          rounded-lg
+          overflow-hidden
+          shadow-lg
+          hover:shadow-xl
+          transition
+          duration-300
+          ease-in-out
+          hover:scale-105
+          cursor-pointer
+          bg-gray-900
+          hover:bg-gray-800
+      ">
+        <img
+          decoding="async"
+          loading="lazy"
+          src="https://www.meetup.com/blog/wp-content/uploads/2022/01/pexels-matheus-bertelli-3856033-945x630.jpg"
+          alt={item.caption}
+          class="w-full h-48 object-cover object-center" />
+        <div class="p-4">
+          <h2 class="text-xl font-bold mb-2 text-blue-200">
+            {item.caption}
+          </h2>
+        </div>
+      </div>
+    ))
+  }
+</div>

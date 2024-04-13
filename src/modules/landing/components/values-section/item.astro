@@ -1,0 +1,20 @@
+---
+const { title, content } = Astro.props;
+---
+<!-- tailwind cards -->
+<article class="
+  bg-blue-500
+  p-6
+  rounded-lg
+  shadow-lg
+  hover:shadow-xl
+  transition
+  duration-300
+  ease-in-out
+  transform
+  hover:-translate-y-1
+  hover:scale-105
+">
+  <h1 class="text-2xl font-bold">{title}</h1>
+  <p>{content}</p>
+</article>

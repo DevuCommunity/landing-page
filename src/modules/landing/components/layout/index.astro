@@ -1,19 +1,32 @@
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <BaseHead title={title}/>
-  </head>
-  <body>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">Posts</a>
-      <a href="#">Contact</a>
-    </nav>
-    <h1>{title}</h1>
-    <article>
-      <slot /> <!-- your content is injected here -->
-    </article>
+---
+import Footer from "./footer.astro"
+import Navbar from "./navbar.astro"
+import { i18n } from "../../../../modules/shared/i18n"
+
+// setup localization
+const lang = Astro.url.searchParams.get('lang');
+console.log({ lang })
+const isValidLocale = i18n.availableLocales.includes(lang)
+i18n.locale = isValidLocale ? lang : 'es'
+
+// localization strings 
+const localizationStrings = {
+  locale: i18n.locale,
+  mission: i18n.translate('landing.mission')
+}
+
+---
+<html lang={localizationStrings.locale}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/png" href="/favicon.png" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Devu Community</title>
+	</head>
+	<body>
+    <Navbar />
+    <slot /> {/* content */}
     <Footer />
-  </body>
+	</body>
 </html>

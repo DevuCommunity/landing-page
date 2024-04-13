@@ -1,34 +1,151 @@
 ---
-import { i18n } from "../modules/shared/i18n"
-
-// setup localization
-const lang = Astro.url.searchParams.get('lang');
-console.log({ lang })
-const isValidLocale = i18n.availableLocales.includes(lang)
-i18n.locale = isValidLocale ? lang : 'es'
-
-// localization strings 
-const localizationStrings = {
-  locale: i18n.locale,
-  mission: i18n.translate('landing.mission')
-}
-
+import LandingLayout from "../modules/landing/components/layout/index.astro"
+import Hero from "../modules/landing/components/hero/index.astro"
+import ValuesSection from "../modules/landing/components/values-section/index.astro"
+import ProjectsSection from "../modules/landing/components/projects-section/index.astro"
+import GallerySection from "../modules/landing/components/gallery-section/index.astro"
 ---
+<LandingLayout>
+  <div style="background-color: hsl(210deg, 30%, 8%)">
+    <section>
+      <Hero />
+    </section>
+    <div class="
+      bg-gradient-to-b
+    from-blue-900  
+      to-black-900
+      bg-noise
+      ">
+      <section class="pb-8">
+        <ValuesSection />
+      </section>
+      <section class="p-8">
+        <h2 class="text-3xl text-white pb-8 text-center">
+          Próximos eventos
+        </h2>
+        <div
+          class="
+            bg-blue-900
+            p-8
+            rounded-lg
+            text-white
+            text-center
+          ">
+          <h3
+            class="
+              text-2xl
+              pb-4
+            "
+          >
+            Womens Techmakers
+          </h3>
+          <div
+            class="
+              p-8
+              text-white
+              text-center
+            "
+          >
+            <h3>Charla de introducción a la programación</h3>
+            <p>Fecha: 20 de marzo</p>
+            <p>Hora: 10:00 am</p>
+            <p>Plataforma: Google Meet</p>
 
-<html lang={localizationStrings.locale}>
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>{localizationStrings.mission}</h1>
-    <a href="?lang=es">Español</a>
-    <a href="?lang=nahuatl">Nahuatl</a>
-    <a href="?lang=en">English</a>
-	</body>
-</html>
-<script>
-</script>
+            <button
+              class="
+                bg-blue-500
+                hover:bg-blue-700
+                text-white
+                font-bold
+                py-2
+                px-4
+                rounded
+                mt-4
+              "
+            >Registrarse</button>
+
+          </div>
+        </div>
+      </section>
+      <section class="p-8">
+        <h2 class="text-3xl text-white pb-8 text-center">
+          Proyectos
+        </h2>
+        <ProjectsSection />
+      </section>
+      <section class="p-8">
+        <h2 class="text-3xl text-white pb-8 text-center">
+          Galería
+        </h2>
+        <GallerySection />
+      </section>
+      <section class="p-8">
+        <h2 class="text-3xl text-white pb-8 text-center">
+          Equipo
+        </h2>
+        <!-- The members list and cofounders with a rounded photo, name, social networks, and title -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div class="bg-blue-900 p-4 rounded-lg">
+            <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
+            <h3 class="text-white text-center text-xl">Jorge Cano</h3>
+            <p class="text-white
+              text-center
+              text-sm
+              pb-4
+            ">Co-fundador</p>
+            <div class="flex justify-center">
+              <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
+                <png-icon name="twitter" class="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+          <div class="bg-blue-900 p-4 rounded-lg">
+            <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
+            <h3 class="text-white text-center text-xl">Jorge Cano</h3>
+            <p class="text-white
+              text-center
+              text-sm
+              pb-4
+            ">Co-fundador</p>
+            <div class="flex justify-center">
+              <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
+                <png-icon name="twitter" class="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+          <div class="bg-blue-900 p-4 rounded-lg">
+            <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
+            <h3 class="text-white text-center text-xl">Jorge Cano</h3>
+            <p class="text-white
+              text-center
+              text-sm
+              pb-4
+            ">Co-fundador</p>
+            <div class="flex justify-center">
+              <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
+                <png-icon name="twitter" class="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+          <div class="bg-blue-900 p-4 rounded-lg">
+            <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
+            <h3 class="text-white text-center text-xl">Jorge Cano</h3>
+            <p class="text-white
+              text-center
+              text-sm
+              pb-4
+            ">Co-fundador</p>
+            <div class="flex justify-center">
+              <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
+                <png-icon name="twitter" class="w-6 h-6" />
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        Comunidades aliadas
+      </section>
+    </div>
+  </div>
+</LandingLayout>
