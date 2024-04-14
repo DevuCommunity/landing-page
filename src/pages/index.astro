@@ -13,27 +13,24 @@ import AsideMenu from "../modules/landing/components/layout/navbar.astro"
 <LandingLayout>
     <Hero />
     <SectionsContainer>
-      <div
-      >
-        <AsideMenu />
-      </div>
-      <div>
-        <section id="about" class="p-8">
+      <AsideMenu />
+      <div class="p-16">
+        <section id="about">
           <ValuesSection />
         </section>
-        <section id="events" class="p-8">
+        <section id="events">
           <Title>Próximos eventos</Title>
           <NextEventsSection />
         </section>
-        <section id="projects" class="p-8">
+        <section id="projects">
           <Title>Proyectos</Title>
           <ProjectsSection />
         </section>
-        <section id="gallery" class="p-8">
+        <section id="gallery">
           <Title>Galería</Title>
           <GallerySection />
         </section>
-        <section id="team" class="p-8">
+        <section id="team">
           <Title>Equipo</Title>
           <TeamSection />
         </section>
