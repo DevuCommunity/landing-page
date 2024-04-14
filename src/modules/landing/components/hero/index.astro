@@ -1,3 +1,31 @@
+<style>
+  /* Define the bounce animation */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0) scale(0.7); rotate: -45deg; }
+  }
+
+  @keyframes emergeFromBottom {
+    0% { transform: translateY(100px); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(0) scale(0.7); }
+  }
+
+  /* Apply animation to the SVG image */
+  .animated-devu-monster {
+    animation: bounce .5s ease-in-out; /* Adjust duration and timing function as needed */
+  }
+
+  /* media query for small devices to show the monster emerging from the bottom without rotation */
+  @media (max-width: 640px) {
+    .animated-devu-monster {
+      scale: 0.7;
+      animation: emergeFromBottom .5s ease-in-out; /* Adjust duration and timing function as needed */
+    }
+  }
+</style>
+
 <div class="
   h-screen
   flex
@@ -5,14 +33,28 @@
   justify-between
   px-8
 ">
-  <div class="text-left text-white">
+  <img
+    id="devu"
+    src="/public/assets/devu-monster.svg"
+    class="
+      absolute
+      bottom-[-10px]
+      sm:rotate-[-45deg]
+      sm:bottom-[-200px]
+      sm:right-[-250px]
+      md:bottom-[-350px]
+      md:right-[-320px]
+      lg:bottom-[-480px]
+      lg:right-[-480px]
+      scale-[.7]
+      animated-devu-monster
+  "/>
+  <div class="text-left text-white relative">
     <h1 class="text-5xl font-bold mb-4">Devu Community</h1>
     <p class="text-lg">Construyendo comunidad</p>
     <a href="#about" class="nav-link mt-8 bg-white text-blue-900 px-6 py-3 rounded-full inline-block">
       Conoce más
     </a>
   </div>
-  <div>
-    contenido derecha animado
-  </div>
+  <div></div>
 </div>
