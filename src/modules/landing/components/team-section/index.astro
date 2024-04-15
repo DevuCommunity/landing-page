@@ -1,60 +1,44 @@
 ---
+import Item from './item.astro'
+
+const members = [
+  {
+    fullName: 'Salma',
+    title: 'Embajadora',
+    avatarUrl: 'https://media.licdn.com/dms/image/C5603AQG9A3X4JjAl6w/profile-displayphoto-shrink_400_400/0/1653612893373?e=1718841600&v=beta&t=ecFQhVaTgEV74rv9QoKsKb7xnQnTkNxbrPUh57P_S3g',
+    bio: 'Egresada de la carrera de...',
+    socialNetworks: [],
+    username: '@salma'
+  },
+  {
+    fullName: 'Odon',
+    title: 'Co-fundador',
+    avatarUrl: 'https://media.licdn.com/dms/image/C5603AQE-KKKNZRjYfw/profile-displayphoto-shrink_100_100/0/1647573541615?e=1718841600&v=beta&t=4jQHTBtV7e7Ks6JmkB-0q5bTs4dORS8ZaTC4bO2ajX4',
+    bio: 'Egresado de la carrera de...',
+    socialNetworks: [],
+    username: '@odon'
+  },
+  {
+    fullName: 'Joss',
+    title: 'Embajadora',
+    avatarUrl: 'https://media.licdn.com/dms/image/D5603AQEqZBGfDoxeUQ/profile-displayphoto-shrink_100_100/0/1682997222520?e=1718841600&v=beta&t=prsM7RH3hFXRZ-556LTysdgCuZmm1wMZcBslAq-Emgk',
+    bio: 'Egresada de la carrera de...',
+    socialNetworks: [],
+    username: '@josselin'
+  },
+  {
+    fullName: 'Chema',
+    title: 'Co-fundador',
+    avatarUrl: 'https://media.licdn.com/dms/image/C5603AQGft4ry29Bz4w/profile-displayphoto-shrink_100_100/0/1595809761397?e=1718841600&v=beta&t=S6A962zg176Z5Gk0qwC-1ak_imEwvfGxTLIniNKyjQA',
+    bio: 'Egresado de la carrera de...',
+    socialNetworks: [],
+    username: '@josemaria'
+  }
+]
+
 ---
 <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-  <div class="bg-blue-900 p-4 rounded-lg">
-    <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
-    <h3 class="text-white text-center text-xl">Jorge Cano</h3>
-    <p class="text-white
-      text-center
-      text-sm
-      pb-4
-    ">Co-fundador</p>
-    <div class="flex justify-center">
-      <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
-        <png-icon name="twitter" class="w-6 h-6" />
-      </a>
-    </div>
-  </div>
-  <div class="bg-blue-900 p-4 rounded-lg">
-    <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
-    <h3 class="text-white text-center text-xl">Jorge Cano</h3>
-    <p class="text-white
-      text-center
-      text-sm
-      pb-4
-    ">Co-fundador</p>
-    <div class="flex justify-center">
-      <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
-        <png-icon name="twitter" class="w-6 h-6" />
-      </a>
-    </div>
-  </div>
-  <div class="bg-blue-900 p-4 rounded-lg">
-    <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
-    <h3 class="text-white text-center text-xl">Jorge Cano</h3>
-    <p class="text-white
-      text-center
-      text-sm
-      pb-4
-    ">Co-fundador</p>
-    <div class="flex justify-center">
-      <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
-        <png-icon name="twitter" class="w-6 h-6" />
-      </a>
-    </div>
-  </div>
-  <div class="bg-blue-900 p-4 rounded-lg">
-    <img src="https://avatars.githubusercontent.com/u/10639145?v=4" class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil de @jorgeucano">
-    <h3 class="text-white text-center text-xl">Jorge Cano</h3>
-    <p class="text-white
-      text-center
-      text-sm
-      pb-4
-    ">Co-fundador</p>
-    <div class="flex justify-center">
-      <a href="https://twitter.com/jorgeucano" class="text-white hover:text-blue-500">
-        <png-icon name="twitter" class="w-6 h-6" />
-      </a>
-    </div>
-  </div>
+  {members.map(member => (
+    <Item {...member} />
+  ))}
 </div>
