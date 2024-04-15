@@ -1,6 +1,5 @@
 ---
 import Footer from "./footer.astro"
-import AsideMenu from "./navbar.astro"
 import { i18n } from "../../../../modules/shared/i18n"
 
 // setup localization
@@ -13,7 +12,6 @@ const localizationStrings = {
   locale: i18n.locale,
   mission: i18n.translate('landing.mission')
 }
-
 ---
 <html lang={localizationStrings.locale}>
 	<head>
@@ -24,41 +22,8 @@ const localizationStrings = {
 		<title>Devu Community</title>
 	</head>
 	<body>
-    <main
-      style="
-        background-image:
-          radial-gradient(
-            37.88% 68.62% at 50% 0,
-            rgba(10, 151, 233, 0.3) 0,
-            rgba(0, 10, 124, 0) 80%
-          ),
-          radial-gradient(
-            50% 60% at 50% 0,
-            rgba(10, 125, 233, 0.5) 0, 
-            rgba(0, 48, 124, 0.4) 90%
-          ),
-          radial-gradient(
-            100% 28.09% at 100% 10%,
-            rgba(10, 155, 233, 0.2) 0,
-            rgba(0, 76, 124, 0.1) 80%,
-            rgba(0, 83, 124, 0) 100%
-          ),
-          linear-gradient(
-            180deg,
-            rgba(0, 66, 124, 0.075) 35.79%,
-            rgba(0, 76, 124, 0.05) 80%,
-            #13161c
-          ),
-          radial-gradient(
-            74.84% 135.56% at 100% 10%,
-            rgba(0, 45, 124, 0.5) 0,
-            #13161c 80%
-          )
-        ;
-      "
-      class="
-        bg-gradient-to-l
-        bg-noise
+    <main style="
+      background-color: var(--navy-blue);
     ">
       <section>
         <slot /> {/* content */}
