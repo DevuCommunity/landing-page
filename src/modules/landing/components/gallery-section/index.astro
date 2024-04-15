@@ -57,36 +57,37 @@ const items = [
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
   <!-- For each item in the items array, create a card with the image, caption, and description -->
   {
-    items.map(item => (
-      <div
-        class="
-          rounded-lg
-          overflow-hidden
-          shadow-lg
-          hover:shadow-xl
-          transition
-          duration-300
-          ease-in-out
-          hover:scale-125
-          cursor-pointer
-          border-2
-          border-[var(--navy-blue-300)]
-          hover:border-[var(--purple-color)]
-          bg-[#0d1e32]
-          p-4
-      ">
-        <img
-          decoding="async"
-          loading="lazy"
-          src="https://www.meetup.com/blog/wp-content/uploads/2022/01/pexels-matheus-bertelli-3856033-945x630.jpg"
-          alt={item.caption}
+    items.map((item, idx) => {
+      return (
+        <div
           class="
-            w-full
-            h-48
-            object-cover
-            object-center
-            rounded-t-lg
-          " />
+            rounded-lg
+            overflow-hidden
+            shadow-lg
+            hover:shadow-xl
+            transition
+            duration-300
+            ease-in-out
+            sm:hover:scale-125
+            cursor-pointer
+            border-2
+            border-[var(--navy-blue-300)]
+            hover:border-[var(--purple-color)]
+            bg-[#0d1e32]
+            p-4
+          ">
+          <img
+            decoding="async"
+            loading="lazy"
+            src="https://www.meetup.com/blog/wp-content/uploads/2022/01/pexels-matheus-bertelli-3856033-945x630.jpg"
+            alt={item.caption}
+            class="
+              w-full
+              h-48
+              object-cover
+              object-center
+              rounded-t-lg
+            "/>
           <h2 class="
             mt-2
             mb-2
@@ -96,7 +97,8 @@ const items = [
           ">
             {item.caption}
           </h2>
-      </div>
-    ))
+        </div>
+      )
+    })
   }
 </div>
