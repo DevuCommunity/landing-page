@@ -60,6 +60,26 @@ body {
   width: fit-content;
 }
 
+.button-ghost-pink {
+  background: transparent;
+  color: var(--pink-color);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Inter";
+  border: solid 1px var(--pink-color);
+  box-sizing: border-box;
+  display: block;
+  width: fit-content;
+}
+.button-ghost-pink:hover {
+  background: var(--pink-color);
+  color: var(--dark-blue);
+}
+
 .button:hover {
   background: var(--radioactive-green);
   color: var(--dark-blue);
