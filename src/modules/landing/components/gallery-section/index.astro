@@ -67,22 +67,35 @@ const items = [
           transition
           duration-300
           ease-in-out
-          hover:scale-105
+          hover:scale-125
           cursor-pointer
-          bg-gray-900
-          hover:bg-gray-800
+          border-2
+          border-[var(--navy-blue-300)]
+          hover:border-[var(--purple-color)]
+          bg-[#0d1e32]
+          p-4
       ">
         <img
           decoding="async"
           loading="lazy"
           src="https://www.meetup.com/blog/wp-content/uploads/2022/01/pexels-matheus-bertelli-3856033-945x630.jpg"
           alt={item.caption}
-          class="w-full h-48 object-cover object-center" />
-        <div class="p-4">
-          <h2 class="text-xl font-bold mb-2 text-blue-200">
+          class="
+            w-full
+            h-48
+            object-cover
+            object-center
+            rounded-t-lg
+          " />
+          <h2 class="
+            mt-2
+            mb-2
+            Fredoka
+            text-lg
+            text-[var(--gray-color)]
+          ">
             {item.caption}
           </h2>
-        </div>
       </div>
     ))
   }

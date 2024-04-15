@@ -3,21 +3,6 @@ const { title, content } = Astro.props;
 ---
 <!-- tailwind cards -->
 <!-- show the card over its container -->
-<style>
-  .project-card-bordered::after {
-    position: absolute;
-    top: -4px; bottom: -4px;
-    left: -4px; right: -4px;
-    background: inear-gradient(
-        to bottom, 
-        var(--purple-color), 
-        var(--radioactive-green)
-      );
-    content: '';
-    z-index: -1;
-    border-radius: 16px;
-  }
-</style>
 <article
   style="
     border: 1px solid var(--radioactive-green);
@@ -37,6 +22,7 @@ const { title, content } = Astro.props;
     hover:scale-105
     hover:rotate-6
     hover:z-10
+    bg-[#010e21]
   "
 >
   <h1 class="Fredoka text-2xl font-bold pb-6">{title}</h1>
