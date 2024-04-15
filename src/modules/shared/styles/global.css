@@ -28,6 +28,10 @@
   --gradient-purple: linear-gradient(90deg, #AB7ABF, #000000 0%,  100%);
 }
 
+body {
+  color: #1a1b1c;
+}
+
 .Fredoka {
   font-family: "FredokaOne", ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }

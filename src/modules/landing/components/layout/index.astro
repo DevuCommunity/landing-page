@@ -12,6 +12,12 @@ const localizationStrings = {
   locale: i18n.locale,
   mission: i18n.translate('landing.mission')
 }
+// background-image: linear-gradient(
+//           180deg,
+//           var(--navy-blue-100) 0%,
+//           var(--navy-blue) 50%,
+//           var(--dark-blue) 100%
+//         );
 ---
 <html lang={localizationStrings.locale}>
 	<head>
@@ -22,9 +28,14 @@ const localizationStrings = {
 		<title>Devu Community</title>
 	</head>
 	<body>
-    <main style="
-      background-color: var(--navy-blue);
-    ">
+    <main
+      style="
+        background-color: var(--dark-blue);
+        
+      "
+      class="
+      "
+    >
       <section>
         <slot /> {/* content */}
         <Footer />
