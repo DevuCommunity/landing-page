@@ -1,5 +1,6 @@
 ---
 import { DevuMonster } from "./3dDevuMonster"
+import SocialNetworks from "./social-network.astro"
 ---
 
 <style>
@@ -78,19 +79,19 @@ import { DevuMonster } from "./3dDevuMonster"
   style="
     background-image: linear-gradient(
       0deg,
-      hsl(213deg 100% 16%) 0%,
-      hsl(215deg 86% 16%) 8%,
-      hsl(217deg 75% 16%) 17%,
-      hsl(219deg 65% 15%) 25%,
-      hsl(221deg 58% 15%) 33%,
-      hsl(222deg 51% 14%) 42%,
-      hsl(224deg 44% 13%) 50%,
-      hsl(225deg 38% 12%) 58%,
-      hsl(227deg 32% 11%) 67%,
-      hsl(229deg 25% 10%) 75%,
-      hsl(231deg 18% 9%) 83%,
-      hsl(232deg 12% 8%) 92%,
-      hsl(0deg 0% 6%) 100%
+      hsl(211deg 100% 12%) 0%,
+      hsl(212deg 92% 13%) 8%,
+      hsl(215deg 82% 14%) 17%,
+      hsl(218deg 72% 16%) 25%,
+      hsl(222deg 63% 18%) 33%,
+      hsl(227deg 55% 19%) 42%,
+      hsl(232deg 48% 21%) 50%,
+      hsl(237deg 43% 23%) 58%,
+      hsl(243deg 41% 24%) 67%,
+      hsl(249deg 41% 25%) 75%,
+      hsl(255deg 42% 25%) 83%,
+      hsl(261deg 43% 26%) 92%,
+      hsl(266deg 44% 26%) 100%
     );
   "
 >
@@ -141,7 +142,7 @@ import { DevuMonster } from "./3dDevuMonster"
         class="
           Fredoka
           purple-font
-          text-5xl
+          text-7xl
           font-bold
           mb-10
           sm:mb-20
@@ -154,6 +155,12 @@ import { DevuMonster } from "./3dDevuMonster"
         tecnología buscan compartir su conocimiento, brindando apoyo a quienes
         lo necesitan.
       </p>
+      <p class="mb-10 max-w-96 text-2xl">
+        ¡Comienza a aprender y compartir con nosotros! 🚀
+      </p>
+      <div class="mb-10">
+        <SocialNetworks />
+      </div>
       <a
         href="#about"
         class="
@@ -165,7 +172,7 @@ import { DevuMonster } from "./3dDevuMonster"
         ¡Conócenos!
       </a>
     </div>
-    <div style="width: 800px; margin-right: -100px;">
+    <div style="width: 600px; height: 729px; margin-right: -100px;">
       <DevuMonster client:only="react"  />
     </div>
   </div>

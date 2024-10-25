@@ -11,6 +11,15 @@ import TeamSection from "../modules/landing/components/team-section/index.astro"
 import NextEventsSection from "../modules/landing/components/next-events-section/index.astro"
 import NavbarMenu from "../modules/landing/components/layout/navbar.astro"
 ---
+<style>
+  section::before {
+    content: "";
+    display: block;
+    height: 100px;
+    margin-top: -100px;
+    visibility: hidden;
+  }
+</style>
 <LandingLayout>
   <NavbarMenu />
   <section id="home" class="mb-28">
