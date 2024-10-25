@@ -14,6 +14,7 @@
     "@astrojs/react": "3.1.1",
     "@astrojs/tailwind": "5.1.0",
     "@astrojs/vercel": "7.5.2",
+    "@react-spring/three": "^9.7.5",
     "@react-three/drei": "^9.115.0",
     "@react-three/fiber": "^8.16.8",
     "@types/react": "18.2.74",
