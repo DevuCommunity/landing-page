@@ -5,8 +5,8 @@ const { title, content } = Astro.props;
 <!-- show the card over its container -->
 <article
   style="
-    border: 1px solid var(--radioactive-green);
-    color: var(--gray-color);
+    border: 2px solid var(--green-radioactive);
+    color: #000;
   ;
   "
   class="
@@ -22,7 +22,7 @@ const { title, content } = Astro.props;
     hover:scale-105
     hover:rotate-6
     hover:z-10
-    bg-[#010e21]
+    bg-[#83c0b2]
   "
 >
   <h1 class="Fredoka text-2xl font-bold pb-6">{title}</h1>
@@ -37,6 +37,6 @@ const { title, content } = Astro.props;
     class="Inter mb-8"
   >{content}</p>
   <div class="flex items-center justify-center">
-    <button class="button-ghost">Próximamente</button>
+    <button class="button-ghost-black">Próximamente</button>
   </div>
 </article>
