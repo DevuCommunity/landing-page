@@ -9,37 +9,37 @@ import ProjectsSection from "../modules/landing/components/projects-section/inde
 import GallerySection from "../modules/landing/components/gallery-section/index.astro"
 import TeamSection from "../modules/landing/components/team-section/index.astro"
 import NextEventsSection from "../modules/landing/components/next-events-section/index.astro"
-import AsideMenu from "../modules/landing/components/layout/navbar.astro"
+import NavbarMenu from "../modules/landing/components/layout/navbar.astro"
 ---
 <LandingLayout>
-  <Hero />
-  <SectionsContainer>
-    <AsideMenu />
-    <div class="p-8 sm:p-16">
-      <section id="about" class="mb-28">
-        <ValuesSection />
-      </section>
-      <section id="events" class="mb-28">
-        <Title>Próximos eventos</Title>
-        <NextEventsSection />
-      </section>
-      <section id="projects" class="mb-28">
-        <Title>Proyectos</Title>
-        <ProjectsSection />
-      </section>
-      <section id="gallery" class="mb-28">
-        <Title>Galería</Title>
-        <GallerySection />
-      </section>
-      <section id="team" class="mb-28">
-        <Title>Equipo</Title>
-        <TeamSection />
-      </section>
-      <section id="communities" class="mb-28">
-        Comunidades aliadas
-      </section>
-    </div>
-  </SectionsContainer>
+  <NavbarMenu />
+  <section id="home" class="mb-28">
+    <Hero />
+  </section>  
+  <div class="p-8 sm:p-16">
+    <section id="about" class="mb-28">
+      <ValuesSection />
+    </section>
+    <section id="events" class="mb-28">
+      <Title>Próximos eventos</Title>
+      <NextEventsSection />
+    </section>
+    <section id="projects" class="mb-28">
+      <Title>Proyectos</Title>
+      <ProjectsSection />
+    </section>
+    <section id="gallery" class="mb-28">
+      <Title>Galería</Title>
+      <GallerySection />
+    </section>
+    <section id="team" class="mb-28">
+      <Title>Equipo</Title>
+      <TeamSection />
+    </section>
+    <section id="communities" class="mb-28">
+      Comunidades aliadas
+    </section>
+  </div>
 </LandingLayout>
 
 <script>

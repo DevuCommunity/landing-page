@@ -9,6 +9,7 @@
 }
 
 :root {
+  --soft-white: #F6F7F9;
   --clear-gray: #E5E5E5;
   --gray-color: #DFDEDE;
   --dark-blue: #001A3B;
@@ -26,6 +27,10 @@
   --dark-purple-100: #311D3A;
   --gradient-green: linear-gradient(90deg, #000000 0%, #99F2BF 100%);
   --gradient-purple: linear-gradient(90deg, #AB7ABF, #000000 0%,  100%);
+}
+
+html {
+  font-size: 16px; /* 1rem = 12px */
 }
 
 body {

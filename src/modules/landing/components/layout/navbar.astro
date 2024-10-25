@@ -4,9 +4,9 @@ import logoImage from "../../../../../public/assets/logo.png"
 ---
 <style>
   .nav-link {
-    font-size: 1.5rem;
+    font-size: 1rem;
     font-weight: 500;
-    color: white;
+    color: var(--soft-white);
     text-decoration: none;
     transition: color 0.1s;
   }
@@ -19,59 +19,66 @@ import logoImage from "../../../../../public/assets/logo.png"
     color: var(--pink-color);
   }
 
-  aside {
-    background: rgba(250, 250, 250, 0.2); 
-    backdrop-filter: blur(25px);
-    -webkit-backdrop-filter: blur(10px); 
-    border-radius: 10px;
-    padding: 20px;
+  ul {
+    list-style: none;
   }
 
-    ul {
-    padding: 2;
-    margin: 2;
-    list-style:none;
-  }
-
-  li {
-    margin: 0 0 4rem 0;
-  }
-  
 </style>
-<aside class="
-  hidden
-  sm:flex
-  justify-between
+<nav class="
   bg-transparent
   text-white
-  h-screen
   sticky
   top-0
-  pr-8
-  pl-8
-  pt-16
-  pb-16
+  position-fixed
+  z-50
+  p-4
+  flex
+  w-full
+  justify-between
+  backdrop-filter
+  backdrop-blur-2xl
+  bg-opacity-50
+  shadow-lg
+  border-b-2
+  border-solid
+  border-white
+  border-opacity-10
+  border-t-0
+  border-l-0
+  border-r-0
 ">
-  
-  <ul class="flex flex-col items-start gap-3">
+  <ul class="flex flex-row items-center gap-4">
+    <li class="">
+      <a href="#home" class="nav-link Inter">
+        <img src='/public/assets/devu-icon.png' alt="Devu" width="35" height="42" />
+      </a>
+    </li>
     <!-- hide options in small screens -->
     <li class="">
-      <a href="#about" class="nav-link Inter">¿Qué es todo esto?</a>
+      <a href="#about" class="nav-link Fredoka">Sobre nosotros</a>
     </li>
     <li class="">
-      <a href="#events" class="nav-link Inter">Eventos</a>
+      <a href="#events" class="nav-link Fredoka">Eventos</a>
     </li>
     <li class="">
-      <a href="#projects" class="nav-link Inter">Proyectos</a>
+      <a href="#projects" class="nav-link Fredoka">Proyectos</a>
     </li>
     <li class="">
-      <a href="#gallery" class="nav-link Inter">Galería</a>
+      <a href="#gallery" class="nav-link Fredoka">Galería</a>
     </li>
     <li class="">
-      <a href="#team" class="nav-link Inter">Equipo</a>
+      <a href="#team" class="nav-link Fredoka">Equipo</a>
+    </li>
+  </ul>
+  <ul class="flex flex-row items-center gap-3">
+    <li class="">
+      <a href="#team" class="nav-link Fredoka">Contacto</a>
+    </li>
+    <li class="">
+      <a href="#team" class="nav-link Fredoka">Código de conducta</a>
     </li>
     <li>
       <LanguageSelector currentLanguage="MX" client:only="react" />
     </li>
   </ul>
-</aside>
+</nav>

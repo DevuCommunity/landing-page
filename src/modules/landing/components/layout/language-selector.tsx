@@ -10,6 +10,9 @@ export const LanguageSelector = ({
   currentLanguage = 'MX'
 }: LanguageSelectorProps) => {
   return (
-    <span className="fi fis fi-mx" />
+    <div>
+      {"Idioma"}
+      <span className="fi fis fi-mx" />
+    </div>
   )
 }
