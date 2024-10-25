@@ -1,47 +1,102 @@
-# Astro Starter Kit: Minimal
+![Atomico](https://raw.githubusercontent.com/atomicojs/docs/master/.gitbook/assets/h4.svg)![Atomico](https://raw.githubusercontent.com/atomicojs/docs/master/.gitbook/assets/h3.svg)
 
-```sh
-npm create astro@latest -- --template minimal
+### Hi, I'm [@uppercod](https://twitter.com/uppercod), creator of Atomico and I want to thank you for starting with Atomico.
+
+If you need help you can find it at:
+
+[![twitter](https://raw.githubusercontent.com/atomicojs/docs/master/.gitbook/assets/twitter.svg)](https://twitter.com/atomicojs)
+[![discord](https://raw.githubusercontent.com/atomicojs/docs/master/.gitbook/assets/discord.svg)](https://discord.gg/7z3rNhmkNE)
+[![documentation](https://raw.githubusercontent.com/atomicojs/docs/master/.gitbook/assets/doc-1.svg)](https://atomico.gitbook.io/doc/)
+[![discord](https://raw.githubusercontent.com/atomicojs/docs/master/.gitbook/assets/doc.svg)](https://webcomponents.dev/edit/collection/F7dm6YnMEDRtAl57RTXU/d6E4w07fsQbb0CelYQac)
+
+Now what you have installed is a quick start kit based on Vite, which you can scale for your project, now to continue you must execute the following commands:
+
+1. `npm install`
+2. `npm start` : Initialize the development server
+3. `npm build` : Optional, Generate a build of your project from the html file [index.html](index.html).
+
+## Workspace
+
+### Recommended structure
+
+```bash
+src
+  |- my-component
+  |  |- my-component.{js,jsx,ts,tsx}
+  |  |- my-component.test.js
+  |  |- README.md
+  |- components.js # import all components
 ```
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+> The `npm run create` command, will create a webcomponent with the recommended structure, the template of this webcomponent can be edited in `templates/component.md`.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Scripts
 
-## 🚀 Project Structure
+### npm run create
 
-Inside of your Astro project, you'll see the following folders and files:
+Create a new webcomponent inside src, according to the recommended structure, the template of this webcomponent can be edited in `templates/component.md`.
 
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+### npm run start
+
+initialize Vite server
+
+### npm run build
+
+package the app using de Vite
+
+### npm run test
+
+Run a test environment in watch mode, as configured in `vite.config.js`.
+
+### npm run coverage
+
+Run a test environment with coverage, as configured in `vite.config.js`.
+
+### npm run exports
+
+Allows you to export your project to npm, this command executes changes in package.json before exporting and the changes will be reverted once exported.
+
+temporary changes are:
+
+1. generation of the packages.json#exports
+2. generation of the pages.json#typesVersions
+3. Compilation of the files and generation of the types if the --types flag is used.
+
+## frequent questions
+
+### How to add postcss?
+
+`@atomico/vite`, allows to preprocess the css template string through postcss, to use this feature add in vite.config.js the following options:
+
+```js
+import atomico from "@atomico/vite";
+import { defineConfig } from "vite";
+
+export default defineConfig({
+  ...
+  plugins: [
+    atomico({
+      cssLiterals: { postcss: true }, // 👈 CONFIGURATION TO ADD
+    }),
+  ],
+});
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+To use postcss at least 1 plugin is required.
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```json
+"postcss": {
+  "plugins": {
+    "postcss-import": {}
+  }
+}
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+### How to publish on github page?
 
-## 🧞 Commands
+Add to `package.json#scripts.build`:
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+```bash
+--outDir docs # modify the destination directory
+--base my-repo # github page folder
+```

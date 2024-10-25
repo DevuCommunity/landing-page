@@ -1,4 +1,4 @@
 node_modules
-.idea
-.code
-.vscode
+package-lock.json
+dist
+types
