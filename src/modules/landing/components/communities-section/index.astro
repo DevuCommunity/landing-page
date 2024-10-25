@@ -1,0 +1,31 @@
+---
+import Item from "./item.astro";
+const partners = [
+  { name: 'GDG Orizaba', logo: '/images/partner1.png' },
+  { name: 'Github Campus Experts', logo: '/images/partner2.png' },
+  { name: 'GDG Xalapa', logo: '/images/partner3.png' },
+  // Agrega más partners aquí
+];
+---
+<style>
+  #container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.item {
+  flex: 0 0 calc(16.66% - 20px);
+  color: white;
+  padding: 20px;
+  margin: 10px;
+}
+</style>
+
+<div id="container">
+  {partners.map(partner => (
+    <div class="item">
+      <Item {...partner} />
+    </div>
+  ))}
+</div>

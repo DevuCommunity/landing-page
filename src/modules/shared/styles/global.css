@@ -41,7 +41,7 @@ html {
 }
 
 body {
-  background-color: #23272f;
+  background: var(--bg-color);
   color: #1a1b1c;
 }
 
