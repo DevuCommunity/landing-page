@@ -1,0 +1,136 @@
+<style>
+  /* Define the bounce animation */
+  @keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0) scale(0.7); rotate: -45deg; }
+  }
+
+  @keyframes emergeFromBottom {
+    0% { transform: translateY(100px); }
+    50% { transform: translateY(0); }
+    100% { transform: translateY(0) scale(0.7); }
+  }
+
+  /* Apply animation to the SVG image */
+  .animated-devu-monster {
+    animation: bounce .5s ease-in-out; /* Adjust duration and timing function as needed */
+  }
+
+  /* media query for small devices to show the monster emerging from the bottom without rotation */
+  @media (max-width: 640px) {
+    .animated-devu-monster {
+      scale: 0.7;
+      animation: emergeFromBottom .5s ease-in-out; /* Adjust duration and timing function as needed */
+    }
+  }
+
+  @keyframes twinkling-stars {
+    from {
+      transform: translateY(-100%);
+    }
+    to {
+      transform: translateY(100%);
+    }
+  }
+
+  .bg {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  @keyframes blink {
+    0%   { opacity: 0; }
+    50% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  .stars-bg__star {
+    opacity: 0;
+    animation: blink 3s infinite;
+  }
+  .stars-bg__blink-2 {
+    animation-delay: 1s;
+  }
+  .stars-bg__blink-3 {
+      animation-delay: 2s;
+  }
+</style>
+
+<div
+  class="
+    h-screen
+    flex
+    md:items-center
+    justify-between
+    p-8
+    sm:p-16
+    relative
+    overflow-hidden
+  "
+  style="
+    background-image: radial-gradient(
+      circle at 80% 8%,
+      #000000 0%,
+      #000000 80%,
+      var(--navy-blue) 100%
+    );
+  "
+>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 545.39 294.79" class='bg'><defs><style>.stars-bg__star{fill:#0971b7;fill-rule:evenodd;}</style></defs><title>Stars-bg</title><g id="06bfc7e1-b704-4078-98ce-2308fc1c2fe9" data-name="Layer 2"><g id="c0153062-95a7-412f-be95-4bccb94029e9" data-name="Layer 1"><path class="stars-bg__star stars-bg__blink-1" d="M4.84,3.53A1.18,1.18,0,1,0,3.66,2.35,1.17,1.17,0,0,0,4.84,3.53"/><path class="stars-bg__star stars-bg__blink-2" d="M512.9,145.88a1.18,1.18,0,1,0-1.18-1.18,1.18,1.18,0,0,0,1.18,1.18"/><path class="stars-bg__star stars-bg__blink-3" d="M411,55.7a1.18,1.18,0,1,0,1.18,1.18A1.17,1.17,0,0,0,411,55.7"/><path class="stars-bg__star stars-bg__blink-2" d="M135.79,27.52A1.18,1.18,0,1,0,137,28.7a1.18,1.18,0,0,0-1.18-1.18"/><path class="stars-bg__star stars-bg__blink-1" d="M100.53,94.49a1.18,1.18,0,1,0,1.18,1.18,1.18,1.18,0,0,0-1.18-1.18"/><path class="stars-bg__star stars-bg__blink-1" d="M16.85,131.35A1.18,1.18,0,1,0,18,132.53a1.18,1.18,0,0,0-1.18-1.18"/><path class="stars-bg__star stars-bg__blink-3" d="M533.24,0a1.18,1.18,0,1,0,1.18,1.18A1.18,1.18,0,0,0,533.24,0"/><path class="stars-bg__star stars-bg__blink-1" d="M340.44,48.52a1.18,1.18,0,1,0-1.18,1.18,1.18,1.18,0,0,0,1.18-1.18"/><path class="stars-bg__star stars-bg__blink-2" d="M200.35,64.06a1.18,1.18,0,1,0,1.18,1.18,1.17,1.17,0,0,0-1.18-1.18"/><path class="stars-bg__star stars-bg__blink-2" d="M159.9,151.18a1.18,1.18,0,1,0-1.18-1.18,1.18,1.18,0,0,0,1.18,1.18"/><path class="stars-bg__star stars-bg__blink-1" d="M544.22,203.63a1.18,1.18,0,1,0-1.18-1.18,1.18,1.18,0,0,0,1.18,1.18"/><path class="stars-bg__star stars-bg__blink-3" d="M135.79,188.61a1.18,1.18,0,1,0,1.18,1.18,1.18,1.18,0,0,0-1.18-1.18"/><path class="stars-bg__star stars-bg__blink-1" d="M1.18,292.44a1.18,1.18,0,1,0,1.18,1.18,1.18,1.18,0,0,0-1.18-1.18"/><path class="stars-bg__star stars-bg__blink-2" d="M478.61,171a1.18,1.18,0,1,0-1.18-1.18,1.18,1.18,0,0,0,1.18,1.18"/><path class="stars-bg__star stars-bg__blink-1" d="M340.44,209.6a1.18,1.18,0,1,0-1.18,1.18,1.18,1.18,0,0,0,1.18-1.18"/><path class="stars-bg__star stars-bg__blink-3" d="M200.35,225.15a1.18,1.18,0,1,0,1.18,1.18,1.17,1.17,0,0,0-1.18-1.18"/><path class="stars-bg__star stars-bg__blink-1" d="M413.82,115.21a1.18,1.18,0,1,0-1.18-1.18,1.18,1.18,0,0,0,1.18,1.18"/><path class="stars-bg__star stars-bg__blink-2" d="M100.53,255.58a1.18,1.18,0,1,0,1.18,1.18,1.18,1.18,0,0,0-1.18-1.18"/><path class="stars-bg__star stars-bg__blink-3" d="M34.65,223.73a1.18,1.18,0,1,0-1.18-1.18,1.18,1.18,0,0,0,1.18,1.18"/></g></g></svg>
+
+  <div style="z-index: 1;">
+    <img
+      id="devu"
+      src="/public/assets/devu-monster.svg"
+      class="
+        absolute
+        bottom-[-50px]
+        sm:rotate-[-45deg]
+        sm:bottom-[-200px]
+        sm:right-[-250px]
+        md:bottom-[-350px]
+        md:right-[-320px]
+        lg:bottom-[-450px]
+        lg:right-[-480px]
+        xl:bottom-[-600px]
+        xl:right-[-520px]
+        scale-[.7]
+        lg:scale-[.6]
+        xl:scale-[.5]
+        animated-devu-monster
+    "/>
+    <div class="text-left text-white">
+      <h1
+        class="
+          Fredoka
+          purple-font
+          text-5xl
+          font-bold
+          mb-10
+          sm:mb-20
+          md:mb-20
+        ">
+        Devu Community
+      </h1>
+      <p class="mb-10 max-w-96 text-2xl">
+        Devu es una comunidad abierta donde desarrolladores y aficionados a la
+        tecnología buscan compartir su conocimiento, brindando apoyo a quienes
+        lo necesitan.
+      </p>
+      <a
+        href="#about"
+        class="
+          Inter
+          nav-link
+          button-ghost
+          button
+        ">
+        ¡Conócenos!
+      </a>
+    </div>
+  </div>
+</div>

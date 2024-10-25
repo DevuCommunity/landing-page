@@ -1,0 +1,38 @@
+---
+import Item from './item.astro'
+const items = [
+  {
+    name: 'DevuConf',
+    coverImage: '/images/mission.jpg',
+    description: 'DevuConf es una conferencia de tecnología que se realiza en la ciudad de Uruapan, Michoacán, México. La conferencia es organizada por la comunidad de desarrolladores de software de la región, con el objetivo de promover la inclusión y la innovación en la educación, la ciencia y la tecnología, a través de la cooperación y la participación de la sociedad.'
+  },
+  {
+    name: 'Devu Accademy',
+    coverImage: '/images/vision.jpg',
+    description: 'Devu Accademy es una academia de tecnología que ofrece cursos, talleres y conferencias en línea y presenciales, para estudiantes, profesionales y empresas, con el objetivo de promover la inclusión y la innovación en la educación, la ciencia y la tecnología, a través de la cooperación y la participación de la sociedad.'
+  },
+  {
+    name: 'Devu DevHouse',
+    coverImage: '/images/values.jpg',
+    description: 'Devu DevHouse es una casa de tecnología que ofrece espacios de trabajo, eventos y servicios para desarrolladores de software, con el objetivo de promover la inclusión y la innovación en la educación, la ciencia y la tecnología, a través de la cooperación y la participación de la sociedad.'
+  },
+  {
+    name: 'Devu Consulting',
+    coverImage: '/images/strategy.jpg',
+    description: 'Devu Consulting es una consultora de tecnología que ofrece servicios de desarrollo de software, diseño de productos y estrategias de innovación, para empresas y organizaciones, con el objetivo de promover la inclusión y la innovación en la educación, la ciencia y la tecnología, a través de la cooperación y la participación de la sociedad.'
+  }
+]
+---
+<!-- A carousel that automatically scrolls to the left and stops on hover -->
+<div class="
+  grid
+  gap-4
+  grid-cols-1
+  md:grid-cols-1
+  lg:grid-cols-3
+  xl:grid-cols-4
+  ">
+  {items.map(item => (
+    <Item title={item.name} content={item.description} />
+  ))}
+</div>

@@ -1,0 +1,42 @@
+---
+const { title, content } = Astro.props;
+---
+<!-- tailwind cards -->
+<!-- show the card over its container -->
+<article
+  style="
+    border: 1px solid var(--radioactive-green);
+    color: var(--gray-color);
+  ;
+  "
+  class="
+    p-6
+    rounded-lg
+    shadow-lg
+    hover:shadow-xl
+    transition
+    duration-300
+    ease-in-out
+    transform
+    hover:-translate-y-1
+    hover:scale-105
+    hover:rotate-6
+    hover:z-10
+    bg-[#010e21]
+  "
+>
+  <h1 class="Fredoka text-2xl font-bold pb-6">{title}</h1>
+  <!-- apply ellipsis to the p -->
+  <p
+    style="
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      -webkit-line-clamp: 5;
+    "
+    class="Inter mb-8"
+  >{content}</p>
+  <div class="flex items-center justify-center">
+    <button class="button-ghost">Próximamente</button>
+  </div>
+</article>

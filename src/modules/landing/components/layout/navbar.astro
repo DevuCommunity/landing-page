@@ -1,0 +1,77 @@
+---
+import { LanguageSelector } from "./language-selector"
+import logoImage from "../../../../../public/assets/logo.png"
+---
+<style>
+  .nav-link {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+    transition: color 0.1s;
+  }
+
+  .nav-link:hover {
+    color: var(--radioactive-green);
+  }
+
+  .nav-link:active {
+    color: var(--pink-color);
+  }
+
+  aside {
+    background: rgba(250, 250, 250, 0.2); 
+    backdrop-filter: blur(25px);
+    -webkit-backdrop-filter: blur(10px); 
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+    ul {
+    padding: 2;
+    margin: 2;
+    list-style:none;
+  }
+
+  li {
+    margin: 0 0 4rem 0;
+  }
+  
+</style>
+<aside class="
+  hidden
+  sm:flex
+  justify-between
+  bg-transparent
+  text-white
+  h-screen
+  sticky
+  top-0
+  pr-8
+  pl-8
+  pt-16
+  pb-16
+">
+  
+  <ul class="flex flex-col items-start gap-3">
+    <!-- hide options in small screens -->
+    <li class="">
+      <a href="#about" class="nav-link Inter">¿Qué es todo esto?</a>
+    </li>
+    <li class="">
+      <a href="#events" class="nav-link Inter">Eventos</a>
+    </li>
+    <li class="">
+      <a href="#projects" class="nav-link Inter">Proyectos</a>
+    </li>
+    <li class="">
+      <a href="#gallery" class="nav-link Inter">Galería</a>
+    </li>
+    <li class="">
+      <a href="#team" class="nav-link Inter">Equipo</a>
+    </li>
+    <li>
+      <LanguageSelector currentLanguage="MX" client:only="react" />
+    </li>
+  </ul>
+</aside>

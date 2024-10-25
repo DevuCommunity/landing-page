@@ -1,0 +1,40 @@
+---
+const {
+  fullName,
+  username,
+  title,
+  bio,
+  avatarUrl,
+  socialNetworks,
+} = Astro.props
+---
+
+<div class="
+  bg-gradient-to-br
+  from-[var(--purple-color)]
+  to-[var(--radioactive-green)]
+  p-[2px]
+  rounded-lg
+  shadow-lg
+">
+  <div
+    class="
+      p-4
+      rounded-lg
+      bg-[var(--dark-blue)]
+    ">
+      <img src={avatarUrl} class="rounded-full w-24 h-24 mx-auto" alt="Foto de perfil">
+      <h3 class="Fredoka text-[var(--purple-color)] text-center text-xl">
+        {fullName}
+      </h3>
+      <p class="
+        Inter
+        text-[var(--gray-color)]
+        text-center
+        text-sm
+        pb-4
+      ">
+      {title}
+    </p>
+  </div>
+</div>
