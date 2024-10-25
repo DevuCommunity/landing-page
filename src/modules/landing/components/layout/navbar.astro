@@ -1,6 +1,8 @@
 ---
 import { LanguageSelector } from "./language-selector"
 import logoImage from "../../../../../public/assets/logo.png"
+import { Image } from 'astro:assets';
+
 ---
 <style>
   .nav-link {
@@ -50,7 +52,7 @@ import logoImage from "../../../../../public/assets/logo.png"
   <ul class="flex flex-row items-center gap-4">
     <li class="">
       <a href="#home" class="nav-link Inter">
-        <img src='/public/assets/devu-icon.png' alt="Devu" width="35" height="42" />
+        <Image decoding="async" loading="eager" src='/public/assets/devu-icon.png' alt="Devu" width="35" height="42" />
       </a>
     </li>
     <!-- hide options in small screens -->

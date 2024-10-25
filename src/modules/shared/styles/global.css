@@ -33,7 +33,7 @@
   141047
   1b1745
   */
-  --bg-color: #0b082e;
+  --bg-color: #011126;
 }
 
 html {
@@ -42,7 +42,7 @@ html {
 
 body {
   background: var(--bg-color);
-  color: #1a1b1c;
+  color: #011126;
 }
 
 .Fredoka {

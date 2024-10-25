@@ -1,4 +1,6 @@
 ---
+import { Image } from 'astro:assets';
+
 const socialNetworks = [
   {
     name: "Discord",
@@ -44,7 +46,7 @@ const socialNetworks = [
       class="p-4"
       target="_blank"
       rel="noopener noreferrer">  
-      <img src={iconPath} style="min-width: 35; min-height: 35;" alt={name} width="35" height="35" />
+      <Image decoding="async" loading="eager" src={iconPath} style="min-width: 35; min-height: 35;" alt={name} width="35" height="35" />
     </a>
   ))}
 </div>

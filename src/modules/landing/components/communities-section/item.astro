@@ -1,5 +1,6 @@
 ---
 const { name, logo } = Astro.props;
+import { Image } from 'astro:assets';
 import Title from "../title/index.astro";
 ---
 <!-- tailwind cards -->
@@ -19,11 +20,14 @@ import Title from "../title/index.astro";
   "
 >
   <div class="flex flex-col items-center justify-center">
-      <img
+      <Image
+        decoding="async"
+        loading="eager"
         alt={`${name} logo`}
         class="w-32 h-32"
         src={logo}
-        alt={name}
+        height={32}
+        width={32}
       />
       <h2
       class="
