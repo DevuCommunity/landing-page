@@ -10,6 +10,7 @@ import TeamSection from "../modules/landing/components/team-section/index.astro"
 import NextEventsSection from "../modules/landing/components/next-events-section/index.astro"
 import CommunitiesSection from "../modules/landing/components/communities-section/index.astro"
 import NavbarMenu from "../modules/landing/components/layout/navbar.astro"
+import Marquee from "../modules/landing/components/marquee/index.astro"
 ---
 <style>
   section::before {
@@ -22,6 +23,7 @@ import NavbarMenu from "../modules/landing/components/layout/navbar.astro"
 </style>
 <LandingLayout>
   <NavbarMenu />
+  <Marquee />
   <section id="home" class="mb-28">
     <Hero />
   </section>  

@@ -1,0 +1,77 @@
+<style>
+:root {
+  background-color: #141414;
+}
+
+.fadeout-horizontal {
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 5rem,
+    black calc(100% - 5rem),
+    transparent
+  );
+}
+
+.center-content {
+  display: flex;
+  align-items: center;
+}
+
+.wrapper {
+  background-color: #000;
+  width: 100%;
+  color: var(--yellow-duck);
+  font-size: 1.5rem;
+  padding: 1rem;
+  font-family: monospace;
+}
+
+.marquee-text {
+  overflow: clip;
+}
+
+.marquee-text-track {
+  display: flex;
+  gap: 2rem;
+  width: max-content;
+  animation: marquee-move-text var(--speed, 60s) linear infinite var(--direction, forwards);
+}
+
+.marquee-text p {
+}
+
+@keyframes marquee-move-text {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+</style>
+
+<a href="#events">
+  <div class="center-content">
+    <div class="wrapper">
+      <div class="marquee-text fadeout-horizontal">
+        <div class="marquee-text-track">
+          <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+          <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</a>

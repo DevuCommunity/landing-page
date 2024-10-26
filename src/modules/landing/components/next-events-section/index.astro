@@ -113,7 +113,7 @@ const upcomingEvents = getUpcomingEvents()
       )
       : (
         <article class="p-8 text-white text-center flex flex-col items-center">
-          <h3 class="Fredoka">{nearestEvent.name}</h3>
+          <h3 class="Fredoka" style="color: var(--yellow-duck);">{nearestEvent.name}</h3>
 
           <div class="p-8 text-center w-full">
             <div class="aspect-video" set:html={nearestEvent.invitationVideos[0].iframe} />
@@ -173,6 +173,7 @@ const upcomingEvents = getUpcomingEvents()
     upcomingEvents.map(event => (
       <div
         class="
+          Inter
           p-8
           rounded-lg
           bg-gradient-to-l
