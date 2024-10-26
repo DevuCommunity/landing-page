@@ -1,10 +1,9 @@
 ---
 import Item from "./item.astro";
-const partners = [
-  { name: 'GDG Orizaba', logo: '/images/partner1.png' },
-  { name: 'Github Campus Experts', logo: '/images/partner2.png' },
-  { name: 'GDG Xalapa', logo: '/images/partner3.png' },
-  // Agrega más partners aquí
+const allies = [
+  { name: 'GDG Orizaba', logo: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/allies/gdg-orizaba.png' },
+  { name: 'Github Campus Experts', logo: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/allies/gh-campus-experts.webp' },
+  { name: 'GDG Xalapa', logo: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/allies/gdg-xalapa.jpg' },
 ];
 ---
 <style>
@@ -23,7 +22,7 @@ const partners = [
 </style>
 
 <div id="container">
-  {partners.map(partner => (
+  {allies.map(partner => (
     <div class="item">
       <Item {...partner} />
     </div>
