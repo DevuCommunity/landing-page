@@ -1,0 +1,82 @@
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3Cpattern id='pattern' width='20' height='20' patternUnits='userSpaceOnUse'%3E%3Crect width='20' height='20' fill='%2318222f'/%3E%3Crect width='10' height='10' fill='%2317222f'/%3E%3C/g%3E%3C/pattern%3E%3C/defs%3E%3Crect width='100%' height='100%' fill='url(%23pattern)'/%3E%3C/svg%3E");
+}
+
+/* Define the bounce animation */
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0) scale(0.7); rotate: -45deg; }
+}
+
+@keyframes emergeFromBottom {
+  0% { transform: translateY(100px); }
+  50% { transform: translateY(0); }
+  100% { transform: translateY(0) scale(0.7); }
+}
+
+/* Apply animation to the SVG image */
+.animated-devu-monster {
+  animation: bounce .5s ease-in-out; /* Adjust duration and timing function as needed */
+}
+
+/* media query for small devices to show the monster emerging from the bottom without rotation */
+@media (max-width: 640px) {
+  .animated-devu-monster {
+    scale: 0.7;
+    animation: emergeFromBottom .5s ease-in-out; /* Adjust duration and timing function as needed */
+  }
+}
+
+@keyframes twinkling-stars {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(100%);
+  }
+}
+
+.bg {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  width: 100vw;
+  height: 100vh;
+}
+
+@keyframes blink {
+  0%   { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.stars-bg__star {
+  opacity: 0;
+  animation: blink 3s infinite;
+}
+.stars-bg__blink-2 {
+  animation-delay: 1s;
+}
+.stars-bg__blink-3 {
+  animation-delay: 2s;
+}
+
+.backgroundGrandient {
+  background-image: linear-gradient(
+      0deg,
+      hsl(211deg 100% 12%) 0%,
+      hsl(212deg 92% 13%) 8%,
+      hsl(215deg 82% 14%) 17%,
+      hsl(218deg 72% 16%) 25%,
+      hsl(222deg 63% 18%) 33%,
+      hsl(227deg 55% 19%) 42%,
+      hsl(232deg 48% 21%) 50%,
+      hsl(237deg 43% 23%) 58%,
+      hsl(243deg 41% 24%) 67%,
+      hsl(249deg 41% 25%) 75%,
+      hsl(255deg 42% 25%) 83%,
+      hsl(261deg 43% 26%) 92%,
+      hsl(266deg 44% 26%) 100%
+    );
+}
