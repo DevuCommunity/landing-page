@@ -13,7 +13,7 @@ export const LanguageSelector = ({
     <div className="Fredoka">
       <span className="fi fis fi-mx mr-3" />
       <span>
-        Idioma
+        Español
       </span>
     </div>
   )

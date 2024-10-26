@@ -72,15 +72,33 @@ import { Image } from 'astro:assets';
       <a href="#team" class="nav-link Fredoka">Equipo</a>
     </li>
   </ul>
-  <ul class="flex flex-row items-center gap-3">
-    <li class="">
-      <a href="#footer" class="nav-link Fredoka">Contacto</a>
-    </li>
-    <li class="">
-      <a href="#team" class="nav-link Fredoka">Código de conducta</a>
-    </li>
-    <li>
+  <div class="flex flex-row items-center gap-3">
+    <ul class="flex flex-row items-center gap-3">
+      <li class="">
+        <a href="#footer" class="nav-link Fredoka">Contacto</a>
+      </li>
+      <li class="">
+        <a href="#team" class="nav-link Fredoka">Código de conducta</a>
+      </li>
+    </ul>
+    <div class="
+      border-l-2
+      border-solid
+      border-white
+      border-opacity-10
+      border-t-0
+      border-b-0
+      border-r-0
+      h-10
+      w-2
+    " />
+    <div class="
+      max-w-24
+      min-w-24
+      overflow-hidden
+      whitespace-nowrap
+    ">
       <LanguageSelector currentLanguage="MX" client:only="react" />
-    </li>
-  </ul>
+    </div>
+  </div>
 </nav>
