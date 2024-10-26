@@ -27,6 +27,7 @@
   --dark-purple-100: #311D3A;
   --gradient-green: linear-gradient(90deg, #000000 0%, #99F2BF 100%);
   --gradient-purple: linear-gradient(90deg, #AB7ABF, #000000 0%,  100%);
+  --yellow-duck: #ffc400;
 
   /*
   241348
@@ -43,6 +44,16 @@ html {
 body {
   background: var(--bg-color);
   color: #011126;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: bold;
+  color: var(--radioactive-green)
 }
 
 .Fredoka {
@@ -115,6 +126,14 @@ body {
 .button-ghost-pink:hover {
   background: var(--pink-color);
   color: var(--dark-blue);
+}
+
+.devu-link {
+  color: var(--yellow-duck);
+  text-decoration: underline;
+}
+.devu-link:hover {
+  color: var(--radioactive-green);
 }
 
 
