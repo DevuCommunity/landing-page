@@ -97,7 +97,7 @@ const upcomingEvents = getUpcomingEvents()
   "
   class="
     Inter
-    p-8
+    md:p-8
     rounded-lg
     text-center
     bg-gradient-to-l
@@ -112,10 +112,10 @@ const upcomingEvents = getUpcomingEvents()
         </div>
       )
       : (
-        <article class="p-8 text-white text-center flex flex-col items-center">
+        <article class="p-4 md:p-8 text-white text-center flex flex-col items-center">
           <h3 class="Fredoka" style="color: var(--yellow-duck);">{nearestEvent.name}</h3>
 
-          <div class="p-8 text-center w-full">
+          <div class="text-center w-full">
             <div class="aspect-video" set:html={nearestEvent.invitationVideos[0].iframe} />
           </div>
 
