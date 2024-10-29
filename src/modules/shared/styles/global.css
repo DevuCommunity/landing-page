@@ -81,7 +81,7 @@ strong {
   border: solid 1px #000;
   box-sizing: border-box;
   display: block;
-  width: fit-content;
+  text-align: center;
 }
 .button-ghost-black:hover {
   background: #000;
@@ -121,7 +121,7 @@ strong {
   border: solid 1px var(--pink-color);
   box-sizing: border-box;
   display: block;
-  width: fit-content;
+  text-align: center;
 }
 .button-ghost-pink:hover {
   background: var(--pink-color);
