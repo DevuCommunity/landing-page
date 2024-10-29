@@ -15,14 +15,38 @@ import "./hero.style.css"
     md:items-center
     justify-between
     overflow-hidden
-    backgroundGrandient
-  ">
+    backgroundGrandient"
+    style="border: 1px solid transparent;"
+  >
   <SvGImage />
   <!-- The z-index is necessary because we have the stars effect in the background and present an issue when selecting the Hero text -->
   <div
+    class="hidden md:block lg:z-10"
+    style="
+      right: -120px;
+      position: absolute;
+      width: 800px;
+      height: 800px;
+      margin-bottom: -150px;
+      border: 1px solid transparent;
+  ">
+    <DevuMonster client:only="react"  />
+  </div>
+  <div
+    class="
+    lg:hidden
+    top-0
+    left-0
+    z-1
+    bg-gradient-to-tl
+  from-blue-950/80
+    absolute
+    w-full h-full
+  "/>
+  <div
     style="z-index: 1;"
-    class="flex justify-between w-full h-full" style="height: 500px;">
-    <div class="text-left text-white">
+    class="flex justify-between w-full h-full">
+    <div class="text-left text-white z-10" style="border: 1px solid transparent;">
       <h1
         class="
           Fredoka
@@ -49,13 +73,6 @@ import "./hero.style.css"
       <a href="#about" class="Inter button nav-link button-ghost-radiactive">
         ¡Conócenos!
       </a>
-    </div>
-    <div style="
-      width: 600px;
-      height: 729px;
-      margin-right: -100px;
-    ">
-      <DevuMonster client:only="react"  />
     </div>
   </div>
 </div>
