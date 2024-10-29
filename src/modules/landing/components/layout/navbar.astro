@@ -1,12 +1,18 @@
 ---
+import { Image } from "astro:assets"
 import { LanguageSelector } from "./language-selector"
-import logoImage from "../../../../../public/assets/logo.png"
-import { Image } from 'astro:assets';
-
 ---
 <style>
   .nav-link {
     font-size: 1rem;
+    font-weight: 500;
+    color: var(--soft-white);
+    text-decoration: none;
+    transition: color 0.1s;
+  }
+
+  .mobile.nav-link {
+    font-size: 1.5rem;
     font-weight: 500;
     color: var(--soft-white);
     text-decoration: none;
@@ -24,8 +30,8 @@ import { Image } from 'astro:assets';
   ul {
     list-style: none;
   }
-
 </style>
+
 <nav class="
   bg-transparent
   text-white
@@ -49,30 +55,30 @@ import { Image } from 'astro:assets';
   border-l-0
   border-r-0
 ">
-  <ul class="flex flex-row items-center gap-4">
-    <li class="">
-      <a href="#home" class="nav-link Inter">
-        <Image decoding="async" loading="eager" src='/public/assets/devu-icon.png' alt="Devu" width="35" height="42" />
-      </a>
-    </li>
-    <!-- hide options in small screens -->
-    <li class="">
-      <a href="#about" class="nav-link Fredoka">Sobre nosotros</a>
-    </li>
-    <li class="">
-      <a href="#events" class="nav-link Fredoka">Eventos</a>
-    </li>
-    <li class="">
-      <a href="#projects" class="nav-link Fredoka">Proyectos</a>
-    </li>
-    <li class="">
-      <a href="#gallery" class="nav-link Fredoka">Galería</a>
-    </li>
-    <li class="">
-      <a href="#team" class="nav-link Fredoka">Equipo</a>
-    </li>
-  </ul>
-  <div class="flex flex-row items-center gap-3">
+  <div class="flex items-enter gap-4">
+    <a id="devu-logo" href="#" class="nav-link Inter">
+      <Image decoding="async" loading="eager" src='/public/assets/devu-icon.png' alt="Devu" width="35" height="42" />
+    </a>
+    <ul class="hidden lg:flex lg:flex-row items-center gap-4">
+      <!-- hide options in small screens -->
+      <li class="">
+        <a href="#about" class="nav-link Fredoka">Sobre nosotros</a>
+      </li>
+      <li class="">
+        <a href="#events" class="nav-link Fredoka">Eventos</a>
+      </li>
+      <li class="">
+        <a href="#projects" class="nav-link Fredoka">Proyectos</a>
+      </li>
+      <li class="">
+        <a href="#gallery" class="nav-link Fredoka">Galería</a>
+      </li>
+      <li class="">
+        <a href="#team" class="nav-link Fredoka">Equipo</a>
+      </li>
+    </ul>
+  </div>
+  <div class="hidden lg:flex lg:flex-row items-center gap-3">
     <ul class="flex flex-row items-center gap-3">
       <li class="">
         <a href="#footer" class="nav-link Fredoka">Contacto</a>
@@ -101,4 +107,60 @@ import { Image } from 'astro:assets';
       <LanguageSelector currentLanguage="MX" client:only="react" />
     </div>
   </div>
+  <!-- Mobile menu button -->
+  <button id="menu-toggle" class="text-white focus:outline-none lg:hidden">
+    <svg id="burger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+    </svg>
+    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+    </svg>
+  </button>
 </nav>
+
+<!-- Mobile Dropdown Menu -->
+<div id="mobile-menu" class="fixed inset-0 bg-gray-900 p-4 hidden lg:hidden z-10 pt-24">
+  <ul class="flex flex-col gap-8 text-white text-2xl items-center">
+    <li><a href="#about" class="mobile nav-link Fredoka">Sobre nosotros</a></li>
+    <li><a href="#events" class="mobile nav-link Fredoka">Eventos</a></li>
+    <li><a href="#projects" class="mobile nav-link Fredoka">Proyectos</a></li>
+    <li><a href="#gallery" class="mobile nav-link Fredoka">Galería</a></li>
+    <li><a href="#team" class="mobile nav-link Fredoka">Equipo</a></li>
+    <li><a href="#footer" class="mobile nav-link Fredoka">Contacto</a></li>
+    <li><a href="#team" class="mobile nav-link Fredoka">Código de conducta</a></li>
+  </ul>
+</div>
+<script>
+  const burgerMenu = document.getElementById('menu-toggle');
+  const devuLogo = document.getElementById('devu-logo');
+
+  const mobileMenu = document.getElementById('mobile-menu');
+  const menuItem = document.querySelectorAll('.mobile.nav-link');
+
+  const burgerIcon = document.getElementById('burger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  const toggleMenu = () => {
+    mobileMenu.classList.toggle('hidden');
+    burgerIcon.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  };
+
+  burgerMenu.addEventListener('click', toggleMenu);
+  menuItem.forEach((item) => item.addEventListener('click', toggleMenu));
+
+  const closeMobileMenu = () => {
+    mobileMenu.classList.add('hidden');
+    burgerIcon.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+  };
+
+  devuLogo.addEventListener('click', () => {
+    closeMobileMenu();
+
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+</script>
