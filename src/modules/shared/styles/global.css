@@ -101,7 +101,7 @@ strong {
   border: solid 1px var(--radioactive-green);
   box-sizing: border-box;
   display: block;
-  width: fit-content;
+  text-align: center;
 }
 .button-ghost-radiactive:hover {
   background: var(--radioactive-green);
