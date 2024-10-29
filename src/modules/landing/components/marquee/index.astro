@@ -1,3 +1,9 @@
+---
+const { event } = Astro.props;
+const marqueeLabel = event?.marqueeLabel || 'Próximo evento';
+
+const marqueeItems = Array.from({ length: 10 }, () => marqueeLabel);
+---
 <style>
 :root {
   background-color: #141414;
@@ -48,28 +54,23 @@
 }
 
 </style>
-
-<div class="center-content">
-  <div class="wrapper">
-    <div class="marquee-text fadeout-horizontal">
-      <div class="marquee-text-track">
-        <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p>Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
-        <p aria-hidden="true">Próximo evento: Nerdearla. 7 y 8 de Noviembre.  Regístrate ya.</p>
+<div>
+{
+  !event
+  ? <div></div>
+  : (
+    <a href="#events" class="nav-link">
+      <div class="center-content">
+        <div class="wrapper">
+          <div class="marquee-text fadeout-horizontal">
+            <div class="marquee-text-track">
+              {marqueeItems.map((label) => <p>{label}</p>)}
+              {marqueeItems.map((label) => <p aria-hidden="true">{label}</p>)}
+            </div>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </a>
+  )
+}
 </div>
