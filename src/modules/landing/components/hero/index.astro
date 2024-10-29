@@ -10,7 +10,7 @@ import "./hero.style.css"
     p-8
     flex
     sm:p-16
-    h-screen
+    min-h-screen
     relative
     md:items-center
     justify-between
@@ -18,10 +18,11 @@ import "./hero.style.css"
     backgroundGrandient
   ">
   <SvGImage />
+  <!-- The z-index is necessary because we have the stars effect in the background and present an issue when selecting the Hero text -->
   <div
     style="z-index: 1;"
-    class="flex justify-between w-full h-full">
-    <div class="text-left text-white h-fit">
+    class="flex justify-between w-full h-full" style="height: 500px;">
+    <div class="text-left text-white">
       <h1
         class="
           Fredoka
