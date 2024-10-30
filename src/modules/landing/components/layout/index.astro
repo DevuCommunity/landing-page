@@ -17,19 +17,51 @@ const localizationStrings = {
 <html lang={localizationStrings.locale}>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/favicon.png" />
+		<link rel="icon" type="image/png" href="/public/assets/devu-icon.png" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+    <!-- All best practices for SEO -->
+    <meta name="description" content="Devu es una comunidad abierta donde desarrolladores y aficionados a la
+        tecnología buscan compartir su conocimiento, brindando apoyo a quienes
+        lo necesitan." />
+    <meta name="keywords" content="devu, community, developers, technology, knowledge, experiences, help, grow" />
+    <meta name="author" content="Devu Community" />
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#011126" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@DevuCommunity" />
+    <meta name="twitter:title" content="Devu Community" />
+    <meta name="twitter:description" content="Devu Community is a community of developers that share knowledge and experiences to help each other grow." />
+    <meta name="twitter:image" content="/public/assets/social-networks/twitter.svg" />
+    <meta property="og:title" content="Devu Community" />
+    <meta property="og:description" content="Devu Community is a community of developers that share knowledge and experiences to help each other grow." />
+    <meta property="og:image" content="/public/assets/social-networks/twitter.svg" />
+    <meta property="og:url" content="https://devucommunity.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Devu Community" />
+    <meta property="og:locale" content={localizationStrings.locale} />
+    <meta property="og:locale:alternate" content="en" />
+    <meta property="og:locale:alternate" content="es" />
+    <meta property="og:locale:alternate" content="pt" />
 		<title>Devu Community</title>
 	</head>
 	<body>
     <main
-      class="
-        bg-gradient-to-b
-        from-[var(--dark-blue)]
-        to-[black]
-        noise
-      "
+      style="background-image: linear-gradient(
+    45deg,
+    hsl(214deg 100% 12%) 0%,
+    hsl(213deg 100% 12%) 8%,
+    hsl(213deg 100% 13%) 17%,
+    hsl(213deg 100% 14%) 25%,
+    hsl(213deg 100% 14%) 34%,
+    hsl(213deg 100% 15%) 42%,
+    hsl(213deg 100% 16%) 51%,
+    hsl(221deg 71% 19%) 59%,
+    hsl(229deg 54% 22%) 67%,
+    hsl(238deg 43% 25%) 76%,
+    hsl(248deg 42% 26%) 84%,
+    hsl(258deg 43% 26%) 92%,
+    hsl(266deg 44% 26%) 100%"
     >
       <section>
         <slot /> {/* content */}

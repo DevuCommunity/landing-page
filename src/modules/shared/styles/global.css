@@ -9,6 +9,7 @@
 }
 
 :root {
+  --soft-white: #F6F7F9;
   --clear-gray: #E5E5E5;
   --gray-color: #DFDEDE;
   --dark-blue: #001A3B;
@@ -26,10 +27,33 @@
   --dark-purple-100: #311D3A;
   --gradient-green: linear-gradient(90deg, #000000 0%, #99F2BF 100%);
   --gradient-purple: linear-gradient(90deg, #AB7ABF, #000000 0%,  100%);
+  --yellow-duck: #ffc400;
+
+  /*
+  241348
+  141047
+  1b1745
+  */
+  --bg-color: #011126;
+}
+
+html {
+  font-size: 16px; /* 1rem = 12px */
 }
 
 body {
-  color: #1a1b1c;
+  background: var(--bg-color);
+  color: #011126;
+}
+
+h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+strong {
+  font-weight: bold;
+  color: var(--radioactive-green)
 }
 
 .Fredoka {
@@ -44,7 +68,27 @@ body {
   color: var(--purple-color);
 }
 
-.button-ghost {
+.button-ghost-black {
+  background: transparent;
+  color: #000;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 40px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Inter";
+  border: solid 1px #000;
+  box-sizing: border-box;
+  display: block;
+  text-align: center;
+}
+.button-ghost-black:hover {
+  background: #000;
+  color: #FFF;
+}
+
+.button-ghost-radiactive {
   background: transparent;
   color: var(--radioactive-green);
   border: none;
@@ -57,7 +101,11 @@ body {
   border: solid 1px var(--radioactive-green);
   box-sizing: border-box;
   display: block;
-  width: fit-content;
+  text-align: center;
+}
+.button-ghost-radiactive:hover {
+  background: var(--radioactive-green);
+  color: var(--dark-blue);
 }
 
 .button-ghost-pink {
@@ -73,14 +121,19 @@ body {
   border: solid 1px var(--pink-color);
   box-sizing: border-box;
   display: block;
-  width: fit-content;
+  text-align: center;
 }
 .button-ghost-pink:hover {
   background: var(--pink-color);
   color: var(--dark-blue);
 }
 
-.button:hover {
-  background: var(--radioactive-green);
-  color: var(--dark-blue);
+.devu-link {
+  color: var(--yellow-duck);
+  text-decoration: underline;
 }
+.devu-link:hover {
+  color: var(--radioactive-green);
+}
+
+

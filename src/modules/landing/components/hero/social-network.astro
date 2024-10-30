@@ -1,0 +1,53 @@
+---
+import { Image } from 'astro:assets';
+
+const socialNetworks = [
+  {
+    name: "Discord",
+    url: "https://discord.gg/SbhVC8gCac",
+    iconPath: "/public/assets/social-networks/discord.png",
+  },
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/devucommunity/",
+    iconPath: "/public/assets/social-networks/instagram.png",
+  },
+  {
+    name: "Facebook",
+    url: "https://www.facebook.com/profile.php?id=100093421317007",
+    iconPath: "/public/assets/social-networks/facebook.png",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/DevuCommunity",
+    iconPath: "/public/assets/social-networks/github.png",
+  },
+  {
+    name: "Linkedin",
+    url: "https://www.linkedin.com/in/devu-community-21522527b/",
+    iconPath: "/public/assets/social-networks/linkedin.png",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/DevuCommunity",
+    iconPath: "/public/assets/social-networks/twitter.svg",
+  },
+  {
+    name: "TikTok",
+    url: "https://www.tiktok.com/@devucommunity",
+    iconPath: "/public/assets/social-networks/tiktok.png",
+  },
+]
+---
+
+<div class="flex">
+  {socialNetworks.map(({ url, name, iconPath }) => (
+    <a href={url}
+      class="p-4"
+      target="_blank"
+      rel="noopener noreferrer">  
+      <Image decoding="async" loading="eager" src={iconPath} style="min-width: 35; min-height: 35;" alt={name} width="35" height="35" />
+    </a>
+  ))}
+</div>
+
