@@ -1,55 +1,127 @@
 ---
+import { Image } from "astro:assets";
+
 const items = [
   {
-    caption: 'hacktober en el IPN CDMX 2023',
-    image: '/img/hacktoberfest.png',
-    description: 'Hacktoberfest es un evento anual que se celebra en octubre y que promueve la contribución a proyectos de código abierto. En el IPN CDMX 2023 se llevará a cabo una serie de eventos para fomentar la participación de la comunidad en este evento.',
+    caption: 'DevuConf 2023 - Networking',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-08-03+devuconf-v1-orizaba/img1.jpeg',
+    description: '',
   },
   {
-    caption: 'Talleres de programación en el IPN CDMX 2023',
-    image: '/img/talleres.png',
-    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de talleres de programación para que los estudiantes puedan aprender nuevas tecnologías y mejorar sus habilidades en el desarrollo de software.',
+    caption: 'DevuConf 2023 - Ponentes',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-08-03+devuconf-v1-orizaba/img4.jpeg',
+    description: '',
   },
   {
-    caption: 'Conferencias sobre tecnología en el IPN CDMX 2023',
-    image: '/img/conferencias.png',
-    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de conferencias sobre tecnología para que los estudiantes puedan conocer las últimas tendencias en el mundo de la tecnología y la informática.',
+    caption: 'DevuConf 2023 - Networking',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-08-03+devuconf-v1-orizaba/img2.jpeg',
+    description: '',
   },
   {
-    caption: 'Hackathons en el IPN CDMX 2023',
-    image: '/img/hackathons.png',
-    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de hackathons para que los estudiantes puedan poner en práctica sus habilidades en el desarrollo de software y trabajar en equipo para resolver problemas reales.',
+    caption: 'DevuConf 2023 - Kit especial',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-08-03+devuconf-v1-orizaba/kit.png',
+    description: '',
   },
   {
-    caption: 'Cursos de programación en el IPN CDMX 2023',
-    image: '/img/cursos.png',
-    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de cursos de programación para que los estudiantes puedan aprender nuevas tecnologías y mejorar sus habilidades en el desarrollo de software.',
+    caption: 'DevuConf 2023 - Kafka (por el Doc Centeno)',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-08-03+devuconf-v1-orizaba/conf1.png',
+    description: '',
   },
   {
-    caption: 'Charlas sobre tecnología en el IPN CDMX 2023',
-    image: '/img/charlas.png',
-    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de charlas sobre tecnología para que los estudiantes puedan conocer las últimas tendencias en el mundo de la tecnología y la informática.',
+    caption: 'DevuConf 2023 - Miguel',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-08-03+devuconf-v1-orizaba/conf2.png',
+    description: '',
   },
   {
-    caption: 'Torneos de programación en el IPN CDMX 2023',
-    image: '/img/torneos.png',
-    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de torneos de programación para que los estudiantes puedan poner en práctica sus habilidades en el desarrollo de software y competir con otros estudiantes.',
+    caption: 'DevuConf 2023 - Clean Code (por César García)',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-08-03+devuconf-v1-orizaba/conf3.png',
+    description: '',
   },
   {
-    caption: 'Seminarios sobre tecnología en el IPN CDMX 2023',
-    image: '/img/seminarios.png',
-    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de seminarios sobre tecnología para que los estudiantes puedan conocer las últimas tendencias en el mundo de la tecnología y la informática.',
+    caption: 'DevuConf 2023 - Despedida',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-08-03+devuconf-v1-orizaba/20230805_165546.jpg',
+    description: '',
   },
   {
-    caption: 'Workshops de programación en el IPN CDMX 2023',
-    image: '/img/workshops.png',
-    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de workshops de programación para que los estudiantes puedan aprender nuevas tecnologías y mejorar sus habilidades en el desarrollo de software.',
+    caption: 'DevuConf 2023 - Team',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-08-03+devuconf-v1-orizaba/IMG_20230805_203816.jpg',
+    description: '',
   },
   {
-    caption: 'Exposiciones sobre tecnología en el IPN CDMX 2023',
-    image: '/img/exposiciones.png',
-    description: 'En el IPN CDMX 2023 se llevarán a cabo una serie de exposiciones sobre tecnología para que los estudiantes puedan conocer las últimas tendencias en el mundo de la'
-  }
+    caption: 'Día del programador - Tec de Orizaba',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-09-13+programer_s-day-ito-orizaba/376263729_180946181696091_2880021078999701680_n.jpg',
+    description: '',
+  },
+  {
+    caption: 'Día del Programador 2023 - Comunidades',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-09-13+programer_s-day-ito-orizaba/programers-day-team.jpg',
+    description: '',
+  },
+  {
+    caption: 'Día del programador - DevuTeam',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2023-09-13+programer_s-day-ito-orizaba/378118046_180946065029436_1933362213845605827_n.jpg',
+    description: '',
+  },
+  {
+    caption: 'International Women\'s Day 2024 - Devu swag',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-04-19+international-women_s-day+-uv-xalapa/devu-swag.png',
+    description: ''
+  },
+  {
+    caption: 'International Women\'s Day 2024 - Speakers',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-04-19+international-women_s-day+-uv-xalapa/ponentes.png',
+    description: ''
+  },
+  {
+    caption: 'International Women\'s Day 2024 - Devu RaspberryPi',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-04-19+international-women_s-day+-uv-xalapa/devu-raspberry.jpg',
+    description: ''
+  },
+  {
+    caption: 'Devu Super Happy Dev House 2024 - Sesiones de desarrollo',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/458499154_1904237496706471_442634612942305550_n.jpg',
+    description: ''
+  },
+  {
+    caption: 'Devu Super Happy Dev House 2024 - Participantes',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/459198389_392606940311527_8422109857485961691_n.jpg',
+    description: ''
+  },
+  {
+    caption: 'Devu Super Happy Dev House 2024 - Colaboración y mentoría',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/459192995_1176286770332650_6497962542602905298_n.jpg',
+    description: ''
+  },
+  {
+    caption: 'Devu Super Happy Dev House 2024 - GDG Xalapa team',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/459210195_1263481301663977_1617334819776946781_n.jpg',
+    description: ''
+  },
+  {
+    caption: 'Devu Super Happy Dev House 2024 - Getting ready',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/459210218_1244653419859943_1276748070244559874_n.jpg',
+    description: ''
+  },
+  {
+    caption: 'Devu Super Happy Dev House 2024 - Regalitos',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/459227260_1254578298891762_1472100521425046940_n.jpg',
+    description: ''
+  },
+  {
+    caption: 'Devu Super Happy Dev House 2024 - Comunidad',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/comunidad.png',
+    description: ''
+  },
+  {
+    caption: 'Devu Super Happy Dev House 2024 - Devu Merch',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/swag1.png',
+    description: ''
+  },
+  {
+    caption: 'Devu Super Happy Dev House 2024 - Devu Merch',
+    image: 'https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/swag2.png',
+    description: ''
+  },
 ]
 ---
 
@@ -76,18 +148,14 @@ const items = [
             bg-[#0d1e32]
             p-4
           ">
-          <img
-            decoding="async"
+          <Image
+            class="w-full h-48 object-cover object-center rounded-t-lg"
+            decoding="auto"
             loading="lazy"
-            src="https://www.meetup.com/blog/wp-content/uploads/2022/01/pexels-matheus-bertelli-3856033-945x630.jpg"
+            src={item.image}
             alt={item.caption}
-            class="
-              w-full
-              h-48
-              object-cover
-              object-center
-              rounded-t-lg
-            "/>
+            width={400}
+            height={400} />
           <h2 class="
             mt-2
             mb-2
