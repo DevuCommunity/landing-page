@@ -5,7 +5,7 @@ const items = [
     name: 'DevuConf',
     coverImage: '/images/mission.jpg',
     description: `
-      DevuConf es un evento gratuito en el que
+      DevuConf es un evento gratuito que
       llevamos a cabo en la ciudad de Orizaba,
       en el que nos reunimos para escuchar charlas de excelentes speakers
       y compartir experiencias.
@@ -17,27 +17,9 @@ const items = [
     description: `
       Es una fiesta para Hackers y aficionados a la tecnología,
       en la que nos reunimos para programar juntos
-      en multiples proyectos y ayudarnos mutuamente.
+      en múltiples proyectos y ayudarnos mutuamente.
     `
   },
-  {
-    name: 'Devu Accademy',
-    coverImage: '/images/vision.jpg',
-    description: `
-      Se trata de una iniciativa para compartir tutoriales y recursos
-      para aprender a programar y mejorar tus habilidades en tecnología.
-      Próximamente.
-    `
-  },
-  {
-    name: 'Devu Consulting',
-    coverImage: '/images/strategy.jpg',
-    description: `
-      Uno de nuestros objetivos es ayudar a las personas a entrar
-      al mercado laboral de la tecnología. Esta es una iniciativa
-      para intermedirar entre empresas y talento. Próximamente.
-    `
-  }
 ]
 ---
 <!-- A carousel that automatically scrolls to the left and stops on hover -->
@@ -45,9 +27,9 @@ const items = [
   grid
   gap-4
   grid-cols-1
-  md:grid-cols-1
-  lg:grid-cols-3
-  xl:grid-cols-4
+  md:grid-cols-2
+  lg:grid-cols-2
+  xl:grid-cols-2
   ">
   {items.map(item => (
     <Item title={item.name} content={item.description} />

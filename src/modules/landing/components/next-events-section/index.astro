@@ -20,11 +20,11 @@ const events = [
       }
     ],
     platform: {
-      name: "Google Meet",
-      link: "https://google.com",
+      name: "No definido",
+      link: "",
     },
     place: {
-      name: "Guadalajara Jalisco",
+      name: "CDMX",
       address: "Av. Insurgentes Sur 1234, Guadalajara",
     },
     dateLabel: "7 y 8 de noviembre",
@@ -137,7 +137,7 @@ const upcomingEvents = getUpcomingEvents()
                 <p style="color: var(--yellow-duck)">
                   Lugar: {nearestEvent.place.name} - {nearestEvent.place.address}
                   <br />
-                  Plataforma: {nearestEvent.platform.name} - <a class="devu-link" href={nearestEvent.platform.link} target="_blank" rel="noopener noreferrer">Enlace</a>
+                  Plataforma: {nearestEvent.platform.name}
                 </p>
               )
           }

@@ -8,7 +8,7 @@ export const VALUES = Object.freeze({
         Promoveer la colaboración para impulsar el crecimiento
         profesional y personal de las personas en la industria tech,
         fomentar la cultura de aprendizaje continuo y la diversidad,
-        abrir oportunidades de desarrollo para todos.`
+        abriendo oportunidades de desarrollo para todos.`
     },
     {
       title: 'Visión',
