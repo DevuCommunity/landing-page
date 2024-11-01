@@ -1,9 +1,9 @@
-import React, { useEffect, useRef, useState } from 'react'
-import { Canvas, useFrame, useLoader } from '@react-three/fiber'
+import React, { useRef, useState } from 'react'
+import { Canvas, useFrame } from '@react-three/fiber'
 import { useGLTF, OrbitControls } from '@react-three/drei';
 import { useSpring, animated } from '@react-spring/three';
 
-function Model(props) {
+function Model() {
   const { scene } = useGLTF('/public/assets/monster.glb'); // Carga el modelo GLB
   const modelRef = useRef();
 
