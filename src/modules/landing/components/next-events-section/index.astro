@@ -6,8 +6,15 @@ const events = [
   {
     id: 1,
     name: "Nerdearla CDMX 2024",
-    description: `Nerdearla es una experiencia social, tanto en persona como en streaming. Espacios de coworking, charlas, talleres y muchas oportunidades para hacer networking y aprender de líderes de la industria.
+    description: `
+    <br/><br/>
+    ***Nerdearla*** es el evento gratuito de ciencia y tecnología más grande de Latinoamérica. Organizado por Sysarmy, la comunidad de sistemas, desde 2014 en Argentina, desde 2023 en Chile y a partir de 2024 también en México.
+    <br/><br/>
+Nerdearla es una experiencia social, tanto en el formato presencial como online. Es una conferencia que cuenta con charlas y talleres técnicos, encuentros sobre divulgación científica y actividades lúdicas de ciencia y tecnología
+; espacios de coworking, interacciones en vivo y muchas oportunidades para hacer networking y aprender de líderes de la industria.
+    <br/><br/>
       <strong>Para participar en Nerdearla, simplemente visita nuestro sitio web oficial y sigue las instrucciones de registro. Puedes elegir la opción de asistir al evento presencial al final del formulario de inscripción. ¡No te pierdas la oportunidad de ser parte de esta increíble experiencia! </strong>
+      <br/><br/>
     `,
     startDate: "2024-11-7",
     participationType: "hybrid", // physical, virtual, hybrid
@@ -27,8 +34,7 @@ const events = [
       name: "CDMX",
       address: "Av. Morelos 67, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX, Mexico",
     },
-    dateLabel: "7 y 8 de noviembre",
-    timeLabel: "10:00 - 14:00",
+    dateLabel: "7 al 9 de noviembre",
     callToAction: "¡Regístrate ahora!",
   },
   {
@@ -98,15 +104,15 @@ const upcomingEvents = getUpcomingEvents()
       )
       : (
         <article class="p-4 md:p-8 text-white text-center flex flex-col items-center">
-          <h3 class="Fredoka" style="color: var(--yellow-duck);">{nearestEvent.name}</h3>
+          <h3 class="Fredoka mb-4" style="color: var(--yellow-duck);">{nearestEvent.name}</h3>
 
           <div class="text-center w-full">
             <div class="aspect-video" set:html={nearestEvent.invitationVideos[0].iframe} />
           </div>
 
-          <p class="text-lg" set:html={nearestEvent.description} />
+          <p class="text-lg max-w-[900px]" set:html={nearestEvent.description} />
           <p>Fecha: {nearestEvent.dateLabel}</p>
-          <p>Hora: {nearestEvent.timeLabel}</p>
+          { nearestEvent.timeLabel ? <p>Hora: {nearestEvent.timeLabel}</p> : <div></div>}
           <p>Tipo de evento: {typeToLabel[nearestEvent.participationType]}</p>
           {
             nearestEvent.participationType === "physical"
@@ -172,10 +178,10 @@ const upcomingEvents = getUpcomingEvents()
           border-2
         ">
         <h3>{event.name}</h3>
-        <p set:html={event.description}></p>
+        <p class="max-w-[700px]" set:html={event.description}></p>
         <p>Tipo: {typeToLabel[event.participationType]}</p>
         <p>Fecha: {event.dateLabel}</p>
-        <p>Hora: {event.timeLabel}</p>
+        { nearestEvent.timeLabel ? <p>Hora: {nearestEvent.timeLabel}</p> : <div></div>}
         <p>Plataforma: {event.platform ? event.platform.name : event.place.name}</p>
         <a
           target="_blank"
