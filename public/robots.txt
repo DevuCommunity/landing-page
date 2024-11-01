@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Bloqueo de carpetas o archivos innecesarios para el SEO
+Disallow: /admin/
+Disallow: /login/
+Disallow: /register/
+Disallow: /cart/
+Disallow: /public/assets/
+Disallow: /public/scripts/
+
+# Bloqueo de scripts y otros recursos irrelevantes para los motores de búsqueda
+Disallow: /*.js$
+Disallow: /*.css$
+Disallow: /*.json$
+
+# Sitemap para ayudar a los motores de búsqueda a indexar tu sitio
+Sitemap: https://devucommunity.com/public/sitemap.xml

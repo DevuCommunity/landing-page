@@ -16,35 +16,39 @@ const localizationStrings = {
 
 <html lang={localizationStrings.locale}>
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/png" href="/public/assets/devu-icon.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-    <!-- All best practices for SEO -->
-    <meta name="description" content="Devu es una comunidad abierta donde desarrolladores y aficionados a la
-        tecnología buscan compartir su conocimiento, brindando apoyo a quienes
-        lo necesitan." />
-    <meta name="keywords" content="devu, community, developers, technology, knowledge, experiences, help, grow" />
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="/public/assets/devu-icon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="generator" content="Astro" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Devu es una comunidad abierta donde desarrolladores y aficionados a la tecnología comparten conocimientos, apoyándose mutuamente para crecer juntos." />
+    <meta name="keywords" content="devu, comunidad, desarrolladores, tecnología, conocimiento, experiencias, ayuda, crecimiento" />
     <meta name="author" content="Devu Community" />
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#011126" />
-    <meta name="twitter:card" content="summary" />
+    
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@DevuCommunity" />
-    <meta name="twitter:title" content="Devu Community" />
-    <meta name="twitter:description" content="Devu Community is a community of developers that share knowledge and experiences to help each other grow." />
-    <meta name="twitter:image" content="/public/assets/social-networks/twitter.svg" />
-    <meta property="og:title" content="Devu Community" />
-    <meta property="og:description" content="Devu Community is a community of developers that share knowledge and experiences to help each other grow." />
-    <meta property="og:image" content="/public/assets/social-networks/twitter.svg" />
+    <meta name="twitter:title" content="Devu Community - Conectando desarrolladores" />
+    <meta name="twitter:description" content="Únete a Devu y sé parte de una comunidad de desarrolladores que comparten conocimientos y experiencias para ayudarse a crecer juntos." />
+    <meta name="twitter:image" content="https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/459198389_392606940311527_8422109857485961691_n.jpg" />
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Devu Community - Comunidad de desarrolladores" />
+    <meta property="og:description" content="Únete a Devu, una comunidad abierta para desarrolladores y entusiastas de la tecnología que buscan compartir conocimientos y crecer juntos." />
+    <meta property="og:image" content="https://devu-landing-statics.s3.us-east-1.amazonaws.com/gallery/2024-09-07+SuperHappyDevHouse/459198389_392606940311527_8422109857485961691_n.jpg" />
     <meta property="og:url" content="https://devucommunity.com" />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="Devu Community" />
-    <meta property="og:locale" content={localizationStrings.locale} />
-    <meta property="og:locale:alternate" content="en" />
-    <meta property="og:locale:alternate" content="es" />
-    <meta property="og:locale:alternate" content="pt" />
-		<title>Devu Community</title>
-	</head>
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:locale:alternate" content="en_US" />
+    <meta property="og:locale:alternate" content="pt_PT" />
+
+    <!-- Title -->
+    <title>Devu Community - Comunidad de desarrolladores</title>
+  </head>
 	<body>
     <main
       style="background-image: linear-gradient(
