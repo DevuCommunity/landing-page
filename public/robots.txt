@@ -15,6 +15,6 @@ Disallow: /*.css$
 Disallow: /*.json$
 
 # Sitemap para ayudar a los motores de búsqueda a indexar el sitio
-Sitemap: https://devu.community/public/sitemap.xml
+Sitemap: https://devu.community/sitemap.xml
 
 # Nota: Este archivo fue generado con ChatGPT porque no soy experto en SEO c:
