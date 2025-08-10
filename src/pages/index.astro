@@ -11,6 +11,9 @@ import NextEventsSection from "../modules/landing/components/next-events-section
 import CommunitiesSection from "../modules/landing/components/communities-section/index.astro"
 import NavbarMenu from "../modules/landing/components/layout/navbar.astro"
 import Marquee from "../modules/landing/components/marquee/index.astro"
+import { getNearestEvent } from "../modules/events/helpers"
+
+const nearestEvent = getNearestEvent()
 ---
 <style>
   section::before {
@@ -23,7 +26,7 @@ import Marquee from "../modules/landing/components/marquee/index.astro"
 </style>
 <LandingLayout id="home">
   <NavbarMenu />
-  <Marquee event={{ marqueeLabel: "Próximo evento: Nerdearla CDMX 2024. Este del 7 al 9 de noviembre. 10:00 - 14:00" }} />
+  <Marquee event={nearestEvent} />
   <section class="mb-28">
     <Hero />
   </section>  
