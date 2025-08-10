@@ -1,58 +1,7 @@
 ---
 import Title from "../../components/title/index.astro"
 import SocialNetwork from "../hero/social-network.astro"
-
-const events = [
-  {
-    id: 1,
-    name: "Nerdearla CDMX 2024",
-    description: `
-    <br/><br/>
-    ***Nerdearla*** es el evento gratuito de ciencia y tecnología más grande de Latinoamérica. Organizado por Sysarmy, la comunidad de sistemas, desde 2014 en Argentina, desde 2023 en Chile y a partir de 2024 también en México.
-    <br/><br/>
-Nerdearla es una experiencia social, tanto en el formato presencial como online. Es una conferencia que cuenta con charlas y talleres técnicos, encuentros sobre divulgación científica y actividades lúdicas de ciencia y tecnología
-; espacios de coworking, interacciones en vivo y muchas oportunidades para hacer networking y aprender de líderes de la industria.
-    <br/><br/>
-      <strong>Para participar en Nerdearla, simplemente visita nuestro sitio web oficial y sigue las instrucciones de registro. Puedes elegir la opción de asistir al evento presencial al final del formulario de inscripción. ¡No te pierdas la oportunidad de ser parte de esta increíble experiencia! </strong>
-      <br/><br/>
-    `,
-    startDate: "2024-11-7",
-    participationType: "hybrid", // physical, virtual, hybrid
-    officialEventUrl: "https://nerdear.la/es/?utm=devu.community",
-    invitationVideos: [
-      {
-        title: "¿Qué es Nerdearla?",
-        url: null,
-        iframe: `<iframe loading="lazy" width="100%" height="100%" src="https://www.youtube.com/embed/Nn7HWUvcEBU?si=OEeqzyA78tp_imwB&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
-      }
-    ],
-    platform: {
-      name: "No definido",
-      link: "",
-    },
-    place: {
-      name: "CDMX",
-      address: "Av. Morelos 67, Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX, Mexico",
-    },
-    dateLabel: "7 al 9 de noviembre",
-    callToAction: "¡Regístrate ahora!",
-  },
-  {
-    id: 2,
-    name: "DevFest 2024 Xalapa",
-    description: "El DevFest llega a Xalapa en su segunda edición, dirigido a estudiantes y desarrolladores (desde principiantes hasta expertos) de la región y el estado. Disfruten de este gran evento tecnológico que se realiza a nivel mundial. ¡No te pierdas de nuestras charlas, demostraciones prácticas, talleres y laboratorios de código! Próximamente más información.",
-    startDate: "2024-12-6",
-    participationType: "hybrid", // physical, virtual, hybrid
-    officialEventUrl: "https://gdg.community.dev/events/details/google-gdg-xalapa-presents-devfest-2024-xalapa/",
-    place: {
-      name: "UV - Contaduría y Administración",
-      address: "S/N Universidad Veracruzana, Xalapa-Enríquez, 91090",
-    },
-    dateLabel: "7 de diciembre del 2024",
-    timeLabel: "9:30 a.m. - 5:00 p.m. (GMT-6)",
-    callToAction: "¡Conocer más!",
-  }
-]
+import { getNearestEvent, getUpcomingEvents } from "../../../events/helpers/index.js"
 
 const typeToLabel = {
   physical: "Presencial",
@@ -60,21 +9,8 @@ const typeToLabel = {
   hybrid: "Híbrido",
 }
 
-const getNearestEvent = () => {
-  const now = new Date()
-  const nearestEvent = events.find(event => new Date(event.startDate) > now)
-  return nearestEvent
-}
-
 const nearestEvent = getNearestEvent()
-
-const getUpcomingEvents = () => {
-  const now = new Date()
-  return events.filter(event => new Date(event.startDate) > now && event.id !== nearestEvent.id)
-}
-
-
-const upcomingEvents = getUpcomingEvents()
+const upcomingEvents = getUpcomingEvents(nearestEvent)
 ---
 
 <Title>Eventos</Title>
@@ -105,10 +41,13 @@ const upcomingEvents = getUpcomingEvents()
       : (
         <article class="p-4 md:p-8 text-white text-center flex flex-col items-center">
           <h3 class="Fredoka mb-4" style="color: var(--yellow-duck);">{nearestEvent.name}</h3>
-
-          <div class="text-center w-full">
-            <div class="aspect-video" set:html={nearestEvent.invitationVideos[0].iframe} />
-          </div>
+          {
+            nearestEvent.invitationVideos.length
+              ? <div class="text-center w-full">
+                  <div class="aspect-video" set:html={nearestEvent?.invitationVideos?.[0]?.iframe} />
+                </div>
+              : <div></div>
+          }
 
           <p class="text-lg max-w-[900px]" set:html={nearestEvent.description} />
           <p>Fecha: {nearestEvent.dateLabel}</p>
@@ -132,13 +71,19 @@ const upcomingEvents = getUpcomingEvents()
                 </p>
               )
           }
-          <a
-            target="_blank"
-            rel="noopener noreferrer"
-            class="button-ghost-pink mt-8 w-full md:w-fit"
-            href={nearestEvent.officialEventUrl}>
-            {nearestEvent.callToAction}
-          </a>
+          {
+            nearestEvent.officialEventUrl
+              ? (
+                <a
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button-ghost-pink mt-8 w-full md:w-fit"
+                href={nearestEvent.officialEventUrl}>
+                {nearestEvent.callToAction}
+              </a>
+              )
+              : <p class="text-lg button-ghost-pink mt-8 w-full md:w-fit !cursor-default">Pronto más información</p>
+          }
           {
             !nearestEvent.invitationVideos.length
               ? <div></div>
@@ -183,13 +128,17 @@ const upcomingEvents = getUpcomingEvents()
         <p>Fecha: {event.dateLabel}</p>
         { nearestEvent.timeLabel ? <p>Hora: {nearestEvent.timeLabel}</p> : <div></div>}
         <p>Plataforma: {event.platform ? event.platform.name : event.place.name}</p>
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button-ghost-pink mt-8 w-full md:w-fit"
-          href={event.officialEventUrl}>
-          {event.callToAction}
-        </a>
+        {
+          event.officialEventUrl
+            ? <a
+                target="_blank"
+                rel="noopener noreferrer"
+                class="button-ghost-pink mt-8 w-full md:w-fit"
+                href={event.officialEventUrl}>
+                {event.callToAction}
+              </a>
+            : <p class="text-lg button-ghost-pink mt-8 w-full md:w-fit !cursor-default">Pronto más información</p>
+        }
       </div>
     ))
   }
