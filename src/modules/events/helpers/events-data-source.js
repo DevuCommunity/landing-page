@@ -1,33 +1,33 @@
 const events = [
   {
-    id: 3,
-    name: "Devugging Day Orizaba 2025",
-    marqueeLabel: "Próximo evento: Devugging Day Orizaba. Este 13 de septiembre de 2025. 11:30 - 5:00 p.m. (GMT-6)",
-    description: `
-      Únete a nosotros sin ningún costo este 13 de septiembre en Orizaba Veracruz
-      para celebrar el crecimiento profesional y personal en el área tecnológica.
-      <br/><br/>
-      Hablaremos sobre los errores y dificultades que hemos enfrentado en el camino,
-      cómo lo abordamos desde diferentes perspectivas, y cómo hemos aprendido de ellos.
-      <br/><br/>
-      Este evento es una oportunidad para compartir experiencias, aprender de los demás.
-      A veces los triunfos se presentan en forma de tropiezos, y queremos celebrar esos
-      momentos juntos. ¡No te lo pierdas!
-      <br/><br/>
-    `,
-    startDate: "2025-09-13",
-    participationType: "physical", // physical, virtual, hybrid
-    officialEventUrl: undefined,
-    callToAction: "El registro estará disponible pronto",
-    place: {
-      name: "Es una sorpresa 😉",
-      address: "Orizaba, Veracruz",
-    },
-    dateLabel: "13 de septiembre del 2025",
-    timeLabel: "11:30 a.m. - 5:00 p.m. (GMT-6)",
-    invitationVideos: [],
-    platform: {},
+  id: 3,
+  name: "Devugging Day Orizaba 2025",
+  marqueeLabel: "Próximo evento: Devugging Day Orizaba. Este 13 de septiembre de 2025. 11:30 - 5:00 p.m. (GMT-6)",
+  description: `
+    Únete a nosotros sin ningún costo este 13 de septiembre en Orizaba Veracruz
+    para celebrar el crecimiento profesional y personal en el área tecnológica.
+    <br/><br/>
+    Hablaremos sobre los errores y dificultades que hemos enfrentado en el camino,
+    cómo lo abordamos desde diferentes perspectivas, y cómo hemos aprendido de ellos.
+    <br/><br/>
+    Este evento es una oportunidad para compartir experiencias, aprender de los demás.
+    A veces los triunfos se presentan en forma de tropiezos, y queremos celebrar esos
+    momentos juntos. ¡No te lo pierdas!
+    <br/><br/>
+  `,
+  startDate: "2025-09-13",
+  participationType: "physical",
+  officialEventUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdZQrAAO2a2v59-HgI1ztW7JwoH1WSISJpgU-3jZ7cjqithFg/viewform?usp=header",
+  callToAction: "¡Regístrate ahora!",
+  place: {
+    name: "Palacio de Hierro, Sala Eiffel",
+    address: "Orizaba, Veracruz"
   },
+  dateLabel: "13 de septiembre del 2025",
+  timeLabel: "11:00 a.m. - 5:00 p.m. (GMT-6)",
+  invitationVideos: [],
+  platform: {},
+},
   {
     id: 1,
     marqueeLabel: "Próximo evento: Nerdearla CDMX 2024. Este del 7 al 9 de noviembre. 10:00 - 14:00",
