@@ -1,3 +1,6 @@
+/**
+ * Events data source
+ */
 const events = [
   {
   id: 3,
