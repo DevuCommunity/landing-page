@@ -5,7 +5,7 @@ const events = [
   {
   id: 3,
   name: "Devugging Day Orizaba 2025",
-  marqueeLabel: "Próximo evento: Devugging Day Orizaba. Este 13 de septiembre de 2025. 11:30 - 5:00 p.m. (GMT-6)",
+  marqueeLabel: "Próximo evento: Devugging Day Orizaba. Este 13 de septiembre de 2025. 11:00 - 5:00 p.m. (GMT-6)",
   description: `
     Únete a nosotros sin ningún costo este 13 de septiembre en Orizaba Veracruz
     para celebrar el crecimiento profesional y personal en el área tecnológica.
